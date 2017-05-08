@@ -48,6 +48,7 @@ header h1 {
 }
 
 header h1 span {
+  display: block;
   font-weight: normal;
 }
 
@@ -102,5 +103,9 @@ header a[class="email"]:active {
   header h1 {
     line-height: 1;
     margin: 0 0 40px;
+  }
+
+  header h1 span {
+    display: inline;
   }
 }
