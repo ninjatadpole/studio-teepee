@@ -55,6 +55,7 @@ header p {
 
 header a {
   color: #000;
+  display: block;
   text-decoration: none;
 }
 
@@ -64,7 +65,7 @@ header a[class="email"]:active {
   text-decoration: underline;
 }
 
-@media print, screen and (min-width: 30em) {
+@media print, screen and (min-width: 34em) {
   body {
     line-height: 1.2;
   }
@@ -73,9 +74,10 @@ header a[class="email"]:active {
     display: flex;
     flex-flow: row;
     margin: 0 auto;
+    max-width: 68em;
     padding: 0;
     position: relative;
-    width: 50%;
+    width: 90%;
   }
 
   header .logo {
@@ -98,24 +100,5 @@ header a[class="email"]:active {
   header h1 {
     line-height: 1;
     margin: 0 0 40px;
-  }
-
-  header h1 span {
-    font-weight: normal;
-  }
-
-  header p {
-    margin: 0;
-  }
-
-  header a {
-    color: #000;
-    text-decoration: none;
-  }
-
-  header a[class="email"]:hover,
-  header a[class="email"]:active {
-    color: #000;
-    text-decoration: underline;
   }
 }
