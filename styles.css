@@ -1,8 +1,9 @@
 html,
 body {
   background: #c3f4f1;
-  color: #000;
+  color: #555;
   font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -13,7 +14,7 @@ body {
   align-items: center;
   display: flex;
   flex-flow: row;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.7;
 }
 
@@ -39,8 +40,9 @@ header .contact {
 }
 
 header h1 {
-  font-weight: bold;
-  font-size: 24px;
+  color: #000;
+  font-weight: 700;
+  font-size: 22px;
   line-height: 1.3;
   margin: 0 0 45px;
 }
@@ -54,14 +56,14 @@ header p {
 }
 
 header a {
-  color: #000;
+  color: #555;
   display: block;
   text-decoration: none;
 }
 
 header a[class="email"]:hover,
 header a[class="email"]:active {
-  color: #000;
+  color: #555;
   text-decoration: underline;
 }
 
