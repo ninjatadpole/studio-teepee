@@ -31,8 +31,9 @@ header .logo {
   background-size: contain;
   display: block;
   height: 20vh;
-  margin-bottom: 16vh;
-  width: 100%;
+  margin: 0 auto 12vh;
+  max-height: 122px;
+  width: 70%;
 }
 
 header .contact {
@@ -89,6 +90,7 @@ header a[class="email"]:active {
     display: block;
     height: auto;
     margin: 0;
+    max-height: 300px;
     width: calc(50% - 45px);
   }
 
