@@ -1,0 +1,10 @@
+$weight-light: 300;
+$weight-regular: 400;
+$weight-semi-bold: 600;
+$weight-bold: 700;
+
+html,
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: $weight-regular;
+}

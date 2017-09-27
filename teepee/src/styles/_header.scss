@@ -1,0 +1,48 @@
+header {
+  align-items: center;
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+
+  .logo {
+    align-items: center;
+    display: flex;
+    font-size: 24px;
+    font-weight: $weight-light;
+    height: 46px;
+
+    strong {
+      font-weight: $weight-semi-bold;
+      margin-right: 7px;
+    }
+
+    img {
+      display: inline-block;
+      height: 100%;
+      margin-right: 5px;
+    }
+  }
+
+  nav {
+    align-items: center;
+    display: flex;
+    font-size: 26px;
+    font-weight: $weight-semi-bold;
+    height: 100%;
+
+    ul {
+      display: block;
+      float: right;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 0 0 24px;
+    }
+
+    a {
+      color: $near-black;
+      text-decoration: none;
+    }
+  }
+}
