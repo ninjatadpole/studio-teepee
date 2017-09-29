@@ -4,13 +4,13 @@ import React from 'react';
 
 function Footer (props) {
   return (
-    <footer>
-      <ul className="contact vcard">
+    <footer className="row container-fluid">
+      <ul className="col-xs-6 contact vcard">
         <li className="adr address">
           A:
-          <span class="street-address">4 Willow Walk</span>,
-          <span class="locality">Ely</span>,
-          <span class="postal-code">CB7 4AT</span>
+          <span className="street-address">4 Willow Walk</span>,
+          <span className="locality">Ely</span>,
+          <span className="postal-code">CB7 4AT</span>
         </li>
         <li className="tel">
           <a href="tel:01353611721">01353 611721</a>
@@ -22,7 +22,7 @@ function Footer (props) {
         </li>
       </ul>
 
-      <ul className="social">
+      <ul className="col-xs-6 social">
         <li className="linkedin">
           <a href="https://www.linkedin.com/company/18096317/">
             <span className="title">LinkedIn</span>

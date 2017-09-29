@@ -1,7 +1,10 @@
+@import './colours';
+@import './typography';
+
 header {
   align-items: center;
   display: flex;
-  height: 70px;
+  height: 100px;
   justify-content: space-between;
 
   .logo {
@@ -14,6 +17,7 @@ header {
     strong {
       font-weight: $weight-semi-bold;
       margin-right: 7px;
+      white-space: nowrap;
     }
 
     img {
@@ -24,15 +28,13 @@ header {
   }
 
   nav {
-    align-items: center;
-    display: flex;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: $weight-semi-bold;
     height: 100%;
+    text-align: right;
 
     ul {
-      display: block;
-      float: right;
+      display: inline-block;
     }
 
     li {
@@ -41,8 +43,12 @@ header {
     }
 
     a {
-      color: $near-black;
+      color: $blue-grey;
       text-decoration: none;
+
+      &.active {
+        color: $near-black;
+      }
     }
   }
 }
