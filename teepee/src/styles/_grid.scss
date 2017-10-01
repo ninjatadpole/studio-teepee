@@ -5,3 +5,41 @@ $gutter-width: 20px;
 $outer-margin: 25px;
 
 $flexboxgrid-max-width: 960px;
+
+$breakpoint-list: (
+  "xs": 0px,    //targeting <568px devices (e.g. all iPhones <6)
+  "sm": 568px,  //targeting >=568px devices (e.g. iPhones >=6)
+  "md": 768px,  //targeting >=768px tablets (e.g. portrait iPad)
+  "lg": 920px  // was 1004, targeting >=1024px tablets (e.g. landscape iPad) and desktops but leaving room for the scroll bar
+);
+
+// flexbox grid settings
+$flexbox-breakpoints: [];
+@each $key, $val in $breakpoint-list {
+  $flexbox-breakpoints: append($flexbox-breakpoints, [$key, $val, $val], space);
+}
+
+$breakpoints: $flexbox-breakpoints;
+@import 'flexboxgrid-sass/flexboxgrid';
+
+// sass-breakpoints settings
+$breakpoints: $breakpoint-list;
+@import "sass-breakpoints/index";
+
+@each $key, $val in $breakpoints {
+  .hide-for-#{$key} {
+    display: inherit;
+
+    @include breakpoint($key) {
+      display: none;
+    }
+  }
+
+  .show-for-#{$key} {
+    display: none;
+
+    @include breakpoint($key) {
+      display: inherit;
+    }
+  }
+}

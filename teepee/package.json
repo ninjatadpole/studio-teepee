@@ -8,7 +8,8 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.13",
-    "reset-css": "^2.2.1"
+    "reset-css": "^2.2.1",
+    "sass-breakpoints": "^2.1.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
