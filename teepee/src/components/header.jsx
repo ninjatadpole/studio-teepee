@@ -2,8 +2,6 @@ import React from 'react';
 
 import imgLogo from '../assets/images/logo.svg';
 
-import '../styles/header.css';
-
 function Header (props) {
   return (
     <header className="row container-fluid">

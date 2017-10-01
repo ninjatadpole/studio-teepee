@@ -1,7 +1,5 @@
 import React from 'react';
 
-import '../styles/footer.css';
-
 function Footer (props) {
   return (
     <footer className="row container-fluid center-xs start-sm">

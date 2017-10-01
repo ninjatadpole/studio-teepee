@@ -1,6 +1,3 @@
-@import './colours';
-@import './typography';
-
 header {
   align-items: center;
   display: flex;
@@ -10,7 +7,7 @@ header {
   .logo {
     align-items: center;
     display: flex;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: $weight-light;
     height: 46px;
     letter-spacing: -1px;
@@ -26,10 +23,14 @@ header {
       height: 100%;
       margin-right: 5px;
     }
+
+    @include breakpoint(lg) {
+      font-size: 24px;
+    }
   }
 
   nav {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: $weight-semi-bold;
     height: 100%;
     text-align: right;
@@ -40,7 +41,7 @@ header {
 
     li {
       display: inline-block;
-      margin: 0 0 0 24px;
+      margin: 0 0 0 19px;
     }
 
     a {
@@ -49,6 +50,14 @@ header {
 
       &.active {
         color: $near-black;
+      }
+    }
+
+    @include breakpoint(lg) {
+      font-size: 24px;
+
+      li {
+        margin-left: 22px;
       }
     }
   }
