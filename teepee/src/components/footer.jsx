@@ -2,8 +2,8 @@ import React from 'react';
 
 function Footer (props) {
   return (
-    <footer className="row container-fluid center-xs start-sm">
-      <ul className="col-xs-8 col-sm-6 contact vcard">
+    <footer className="row container-fluid">
+      <ul className="contact vcard">
         <li className="adr address">
           <abbr title="address">A:</abbr>
           <span className="street-address">4 Willow Walk</span>
@@ -21,7 +21,7 @@ function Footer (props) {
         </li>
       </ul>
 
-      <ul className="col-xs-8 col-sm-6-offset-0 col-sm-6 end-sm social">
+      <ul className="social">
         <li className="linkedin">
           <a href="https://www.linkedin.com/company/18096317/" className="icon-logo-linkedin">
             <span className="title">LinkedIn</span>

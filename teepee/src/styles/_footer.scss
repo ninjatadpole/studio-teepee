@@ -1,8 +1,15 @@
 footer {
+  @extend .center-xs;
+  @extend .start-sm;
+
   .contact {
+    @extend .col-xs-10;
+    @extend .col-sm-6;
+
     font-size: 14px;
     font-weight: $weight-regular;
     line-height: 21px;
+    padding-bottom: 20px;
 
     abbr {
       display: inline-block;
@@ -34,9 +41,17 @@ footer {
       color: $near-black;
       text-decoration: none;
     }
+
+    @include breakpoint(sm) {
+      padding-bottom: 0;
+    }
   }
 
   .social {
+    @extend .col-xs-10;
+    @extend .col-sm-6;
+    @extend .end-sm;
+
     display: block;
 
     li {
