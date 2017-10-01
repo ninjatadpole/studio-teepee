@@ -1,10 +1,8 @@
 header {
-  $height: 46px;
-
   align-items: center;
   display: flex;
   height: 100px;
-  justify-content: space-between;
+  justify-content: flex-end;
 
   .brand {
     @extend .col-xs-9;
@@ -12,14 +10,16 @@ header {
 
     font-size: 20px;
     font-weight: $weight-light;
-    height: $height;
+    height: $nav-height;
+    left: 15px;
     letter-spacing: -1px;
     line-height: 20px;
+    position: absolute;
 
     i {
       float: left;
-      font-size: $height;
-      line-height: $height;
+      font-size: $nav-height;
+      line-height: $nav-height;
       margin-right: 4px;
     }
 
@@ -28,13 +28,14 @@ header {
       font-weight: $weight-semi-bold;
       padding-top: 8px;
       white-space: nowrap;
+      width: 70%;
     }
 
     @include breakpoint(sm) {
       align-items: center;
       display: flex;
       font-size: 22px;
-      line-height: $height;
+      line-height: $nav-height;
 
       i {
         float: none;
@@ -47,66 +48,8 @@ header {
     }
     @include breakpoint(md) {
       font-size: 24px;
-    }
-  }
-
-  nav {
-    @extend .col-xs-3;
-    @extend .col-md-7;
-
-    font-size: 20px;
-    font-weight: $weight-semi-bold;
-    height: $height;
-    text-align: right;
-
-    .mobile-nav-trigger {
-      @extend .hide-for-md;
-
-      appearance: none;
-      background: none;
-      border: none;
-      display: block;
-      font-size: 16px;
-      font-weight: $weight-regular;
-      height: 100%;
-      padding: 0;
-      text-align: right;
-      white-space: nowrap;
-      width: 100%;
-
-      i {
-        padding-left: 4px;
-      }
-
-      @include breakpoint(sm) {
-        font-size: 18px;
-      }
-    }
-
-    ul {
-      @extend .show-for-md;
-    }
-
-    li {
-      display: inline-block;
-      margin: 0 0 0 19px;
-    }
-
-    a {
-      color: $blue-grey;
-      text-decoration: none;
-
-      &.active {
-        color: $near-black;
-      }
-    }
-
-    @include breakpoint(lg) {
-      font-size: 24px;
-
-      li {
-        margin-left: 22px;
-      }
+      left: 0;
+      position: relative;
     }
   }
 }

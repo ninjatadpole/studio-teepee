@@ -1,0 +1,97 @@
+.navigation {
+  @extend .col-xs-12;
+  @extend .col-md-7;
+
+  display: flex;
+  font-size: 20px;
+  font-weight: $weight-semi-bold;
+  height: $nav-height;
+  justify-content: flex-end;
+  position: relative;
+  text-align: right;
+
+  .mobile-nav-trigger {
+    @extend .hide-for-md;
+
+    appearance: none;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: $weight-regular;
+    height: 100%;
+    line-height: 1;
+    outline: none;
+    padding: 0;
+    text-align: right;
+    white-space: nowrap;
+
+    i {
+      padding-left: 4px;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 18px;
+    }
+  }
+
+  ul {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 100%;
+
+    &.open {
+      max-height: 50vh;
+      opacity: 1;
+    }
+
+    &.open,
+    &.closing {
+      background: transparentize($white, .08);
+      border-radius: 4px;
+      display: block;
+      padding: 8px 0;
+      transition: max-height 330ms ease-in-out, opacity 300ms ease-in;
+
+      li {
+        display: block;
+        margin: 0;
+      }
+
+      a {
+        padding: 6px 10px;
+      }
+    }
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 0 0 19px;
+  }
+
+  a {
+    color: $blue-grey;
+    display: block;
+    text-decoration: none;
+
+    &.active {
+      color: $near-black;
+    }
+  }
+
+  @include breakpoint(md) {
+    display: block;
+  }
+
+  @include breakpoint(lg) {
+    font-size: 24px;
+
+    li {
+      margin-left: 22px;
+    }
+  }
+}
