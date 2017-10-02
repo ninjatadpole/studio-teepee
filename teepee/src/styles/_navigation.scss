@@ -41,11 +41,11 @@
     padding: 0;
     position: absolute;
     right: 0;
-    top: 100%;
+    top: calc(100% + 5px);
     width: 100%;
 
     &.open {
-      max-height: 50vh;
+      max-height: 7rem;
       opacity: 1;
     }
 
@@ -55,36 +55,66 @@
       border-radius: 4px;
       display: block;
       padding: 8px 0;
-      transition: max-height 330ms ease-in-out, opacity 300ms ease-in;
-
-      li {
-        display: block;
-        margin: 0;
-      }
-
-      a {
-        padding: 6px 10px;
-      }
+      transition: max-height 330ms ease-in-out, opacity 350ms ease-in-out;
     }
   }
 
   li {
-    display: inline-block;
-    margin: 0 0 0 19px;
+    display: block;
+    margin: 0;
   }
 
   a {
     color: $blue-grey;
     display: block;
+    padding: 6px 10px;
     text-decoration: none;
+    transition: color 200ms ease-in-out;
 
     &.active {
+      color: $near-black;
+    }
+
+    &:hover {
       color: $near-black;
     }
   }
 
   @include breakpoint(md) {
     display: block;
+
+    ul {
+      align-items: center;
+      display: flex;
+      height: $nav-height;
+      justify-content: flex-end;
+      max-height: $nav-height;
+      opacity: 1;
+      position: relative;
+      right: auto;
+      top: 0;
+
+      &.open,
+      &.closing {
+        background: transparent;
+        padding: 0;
+      }
+    }
+
+    li {
+      display: inline-block;
+      height: $nav-height;
+      margin: 0 0 0 18px;
+
+      &:first-of-type {
+        margin: 0;
+      }
+    }
+
+    a {
+      line-height: $nav-height;
+      padding: 0;
+    }
   }
 
   @include breakpoint(lg) {
