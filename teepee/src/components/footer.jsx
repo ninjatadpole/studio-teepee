@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer (props) {
   return (
-    <footer className="row container-fluid">
+    <footer className="row">
       <ul className="contact vcard">
         <li className="adr address">
           <abbr title="address">A:</abbr>

@@ -4,13 +4,15 @@ import Navigation from './navigation.jsx';
 
 function Header (props) {
   return (
-    <header className="row container-fluid">
-      <p className="brand">
-        <i className="icon-logo" />
-        <b>studio teepee</b> architects
-      </p>
+    <header className="wrapper">
+      <div className="row header-content">
+        <p className="brand">
+          <i className="icon-logo" />
+          <b>studio teepee</b> architects
+        </p>
 
-      <Navigation />
+        <Navigation />
+      </div>
     </header>
   )
 }

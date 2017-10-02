@@ -8,8 +8,12 @@ import './styles/teepee.css';
 class App extends Component {
   render() {
     return (
-      <div className="teepee wrapper">
+      <div className="teepee wrapper container-fluid">
         <Header />
+
+        <main>
+          Where the content will go
+        </main>
 
         <Footer />
       </div>
