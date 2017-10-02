@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Navigation from './navigation.jsx';
 
@@ -7,8 +8,10 @@ function Header (props) {
     <header className="wrapper">
       <div className="row header-content">
         <p className="brand">
-          <i className="icon-logo" />
-          <b>studio teepee</b> architects
+          <Link to="/">
+            <i className="icon-logo" />
+            <b>studio teepee</b> architects
+          </Link>
         </p>
 
         <Navigation />

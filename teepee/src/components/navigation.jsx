@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import { Link } from 'react-router-dom';
 
 class Navigation extends Component {
   constructor(props) {
@@ -49,13 +50,13 @@ class Navigation extends Component {
             'closing': this.state.closing
           }) }>
           <li className="home">
-            <a href="/homeowner">homeowner</a>
+            <Link to="/homeowner">homeowner</Link>
           </li>
           <li className="developer">
-            <a href="/developer">developer</a>
+            <Link to="/developer">developer</Link>
           </li>
           <li className="experience">
-            <a href="/experience">past experience</a>
+            <Link to="/experience">past experience</Link>
           </li>
         </ul>
       </nav>
