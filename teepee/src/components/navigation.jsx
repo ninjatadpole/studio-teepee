@@ -11,6 +11,7 @@ class Navigation extends Component {
       open: false,
     };
 
+    this.closeNav = this.closeNav.bind(this);
     this.toggleNav = this.toggleNav.bind(this);
   }
 
@@ -33,6 +34,12 @@ class Navigation extends Component {
     }
   }
 
+  closeNav() {
+    if (this.state.open) {
+      this.toggleNav();
+    }
+  }
+
   render() {
     return (
       <nav className="navigation">
@@ -50,13 +57,13 @@ class Navigation extends Component {
             'closing': this.state.closing
           }) }>
           <li className="home">
-            <Link to="/homeowner">homeowner</Link>
+            <Link to="/homeowner" onClick={ this.closeNav }>homeowner</Link>
           </li>
           <li className="developer">
-            <Link to="/developer">developer</Link>
+            <Link to="/developer" onClick={ this.closeNav }>developer</Link>
           </li>
           <li className="experience">
-            <Link to="/experience">past experience</Link>
+            <Link to="/experience" onClick={ this.closeNav }>past experience</Link>
           </li>
         </ul>
       </nav>
