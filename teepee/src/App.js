@@ -1,18 +1,25 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Footer from './components/footer.jsx'
-import Header from './components/header.jsx'
+import Home from './pages/home.jsx';
+
+import Footer from './components/footer.jsx';
+import Header from './components/header.jsx';
 
 import './styles/teepee.css';
 
-const Home = () => <main><h2>Home</h2></main>
 const HomeOwner = () => <main><h2>Home Owner</h2></main>
 const Developer = () => <main><h2>Developer</h2></main>
 const Experience = () => <main><h2>Experience</h2></main>
 
 const App = () => (
   <Router>
+    <Contents />
+  </Router>
+)
+
+const Contents = (props) => {
+  return (
     <div>
       <div className="teepee wrapper container-fluid">
         <Header />
@@ -28,7 +35,7 @@ const App = () => (
         <Footer />
       </div>
     </div>
-  </Router>
-)
+  );
+}
 
 export default App;
