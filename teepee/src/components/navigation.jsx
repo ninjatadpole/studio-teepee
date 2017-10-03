@@ -13,6 +13,8 @@ class Navigation extends Component {
 
     this.closeNav = this.closeNav.bind(this);
     this.toggleNav = this.toggleNav.bind(this);
+
+    this.props.registerCloseNav(this.closeNav);
   }
 
   toggleNav() {
@@ -69,6 +71,10 @@ class Navigation extends Component {
       </nav>
     );
   }
+}
+
+Navigation.propTypes = {
+  registerCloseNav: React.PropTypes.func,
 }
 
 export default Navigation;
