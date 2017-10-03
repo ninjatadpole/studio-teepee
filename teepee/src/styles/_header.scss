@@ -24,6 +24,8 @@ header {
     letter-spacing: -1px;
     line-height: 20px;
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 
     a {
       color: $near-black;
@@ -56,15 +58,18 @@ header {
       }
 
       b {
-        margin-right: 7px;
         padding: 0;
         width: auto;
       }
     }
+
     @include breakpoint(md) {
       font-size: 24px;
       left: 0;
+      padding-right: 0;
       position: relative;
+      top: auto;
+      transform: translateY(0);
     }
   }
 }
