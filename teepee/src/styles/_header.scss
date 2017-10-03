@@ -14,7 +14,7 @@ header {
   }
 
   .brand {
-    @extend .col-xs-9;
+    @extend .col-xs-8;
     @extend .col-md-5;
 
     font-size: 20px;
@@ -26,6 +26,7 @@ header {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 2;
 
     a {
       color: $near-black;
@@ -44,7 +45,6 @@ header {
       font-weight: $weight-semi-bold;
       padding-top: 8px;
       white-space: nowrap;
-      width: 70%;
     }
 
     @include breakpoint(sm) {
@@ -59,7 +59,6 @@ header {
 
       b {
         padding: 0;
-        width: auto;
       }
     }
 

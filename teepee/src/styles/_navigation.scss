@@ -9,6 +9,7 @@
   justify-content: flex-end;
   position: relative;
   text-align: right;
+  z-index: 1;
 
   .mobile-nav-trigger {
     @extend .hide-for-md;
