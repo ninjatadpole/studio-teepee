@@ -1,0 +1,65 @@
+.page-home {
+  .developer,
+  .homeowner {
+    background: center no-repeat;
+    background-size: cover;
+    display: inline-block;
+    padding-bottom: 50%;
+    position: relative;
+    width: 50%;
+
+    &::before {
+      background-color: transparentize($aqua, .3);
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: background-color 330ms ease-in-out;
+      width: 100%;
+    }
+
+    &:hover::before {
+      background-color: transparentize($near-black, .1);
+    }
+
+    &::after {
+      color: $near-black;
+      content: '';
+      display: block;
+      font-size: 4.5vw;
+      font-weight: $weight-regular;
+      left: 50%;
+      letter-spacing: -1px;
+      position: absolute;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      transition: color 330ms ease-in-out;
+    }
+
+    &:hover::after {
+      color: $white;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  .developer {
+    background-image: url('../assets/images/illus-fp-developer.jpg');
+
+    &::after {
+      content: 'developer';
+    }
+  }
+
+  .homeowner {
+    background-image: url('../assets/images/illus-fp-homeowner.jpg');
+
+    &::after {
+      content: 'homeowner';
+    }
+  }
+}
