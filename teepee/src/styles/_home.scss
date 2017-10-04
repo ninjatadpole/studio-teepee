@@ -1,4 +1,8 @@
 .page-home {
+  .wide {
+    @extend .row;
+  }
+
   .developer,
   .homeowner {
     background: center no-repeat;
