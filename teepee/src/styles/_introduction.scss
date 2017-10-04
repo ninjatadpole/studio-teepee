@@ -1,0 +1,29 @@
+.introduction {
+  padding-top: 10px;
+
+  h1 {
+    font-size: 36px;
+    font-weight: $weight-regular;
+    line-height: 42px;
+  }
+
+  .description {
+    @extend .row;
+
+    font-size: 17px;
+    font-weight: $weight-light;
+
+    .col {
+      @extend .col-xs-4;
+    }
+
+    li {
+      padding-bottom: 4px;
+
+      &::before {
+        content: "\2022";
+        padding-right: 6px;
+      }
+    }
+  }
+}
