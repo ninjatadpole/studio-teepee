@@ -14,7 +14,10 @@
     font-weight: $weight-light;
 
     .col {
-      @extend .col-xs-4;
+      @extend .col-xs-12;
+      @extend .col-md-4;
+
+      margin-bottom: 24px;
     }
 
     li {
@@ -24,6 +27,10 @@
         content: "\2022";
         padding-right: 6px;
       }
+    }
+
+    b {
+      font-weight: $weight-regular;
     }
   }
 }
