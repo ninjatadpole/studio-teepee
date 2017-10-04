@@ -35,18 +35,23 @@ header {
       text-decoration: none;
     }
 
-    i {
+    .icon-logo {
       float: left;
       font-size: $nav-height;
       line-height: $nav-height;
-      margin-right: 4px;
+      position: absolute;
     }
 
-    b {
-      display: inline-block;
+    .company {
       font-weight: $weight-semi-bold;
       padding-top: 8px;
       white-space: nowrap;
+    }
+
+    .company,
+    .profession {
+      display: block;
+      padding-left: 64px;
     }
 
     @include breakpoint(sm) {
@@ -55,12 +60,15 @@ header {
       font-size: 24px;
       line-height: $nav-height;
 
-      i {
-        float: none;
+      .icon-logo {
+        position: relative;
       }
 
-      b {
-        padding: 0;
+      .company,
+      .profession {
+        display: inline-block;
+        padding-left: .3em;
+        padding-top: 0;
       }
     }
 

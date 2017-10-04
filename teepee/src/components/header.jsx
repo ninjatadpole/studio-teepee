@@ -22,7 +22,8 @@ class Header extends React.Component {
           <p className="brand">
             <Link to="/" onClick={ this.closeNav }>
               <i className="icon-logo" />
-              <b>studio teepee</b> architects
+              <b className="company">studio teepee</b>
+              <span className="profession">architects</span>
             </Link>
           </p>
 
