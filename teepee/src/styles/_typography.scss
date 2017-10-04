@@ -5,20 +5,22 @@ $weight-bold: 700;
 
 html,
 body {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: $weight-regular;
+  letter-spacing: -1px;
+  line-height: 1.5;
 }
 
 @font-face {
-  font-family: 'teepee-icons';
-  src: url('../assets/fonts/teepee-icons.woff') format('woff');
+  font-family: "teepee-icons";
+  src: url("../assets/fonts/teepee-icons.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'teepee-icons' !important;
+  font-family: "teepee-icons" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;

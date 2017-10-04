@@ -18,12 +18,13 @@ header {
     @extend .col-xs-8;
     @extend .col-md-5;
 
-    font-size: 20px;
+    $font-size: 20px;
+
+    font-size: $font-size;
     font-weight: $weight-light;
     height: $nav-height;
     left: 15px;
-    letter-spacing: -1px;
-    line-height: 20px;
+    line-height: $font-size;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -51,7 +52,7 @@ header {
     @include breakpoint(sm) {
       align-items: center;
       display: flex;
-      font-size: 22px;
+      font-size: 24px;
       line-height: $nav-height;
 
       i {
