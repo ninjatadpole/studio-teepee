@@ -50,17 +50,9 @@
 
   .developer {
     background-image: url('../assets/images/illus-fp-developer.jpg');
-
-    &::after {
-      content: 'developer';
-    }
   }
 
   .homeowner {
     background-image: url('../assets/images/illus-fp-homeowner.jpg');
-
-    &::after {
-      content: 'homeowner';
-    }
   }
 }
