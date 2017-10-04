@@ -3,7 +3,8 @@ $weight-regular: 400;
 $weight-bold: 700;
 
 html,
-body {
+body,
+button {
   font-family: "Josefin Sans", sans-serif;
   font-weight: $weight-regular;
   letter-spacing: -1px;

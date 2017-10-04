@@ -53,7 +53,7 @@
 
     &.open,
     &.closing {
-      background: transparentize($white, .08);
+      background: transparentize(lighten($aqua, 8%), .08);
       border-radius: 4px;
       display: block;
       padding: 8px 0;
