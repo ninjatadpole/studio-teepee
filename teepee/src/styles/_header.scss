@@ -43,7 +43,7 @@ header {
     }
 
     .company {
-      font-weight: $weight-semi-bold;
+      font-weight: $weight-regular;
       padding-top: 8px;
       white-space: nowrap;
     }
@@ -67,7 +67,7 @@ header {
       .company,
       .profession {
         display: inline-block;
-        padding-left: .3em;
+        padding-left: .25em;
         padding-top: 0;
       }
     }
