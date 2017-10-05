@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class Navigation extends Component {
   constructor(props) {
@@ -58,14 +58,29 @@ class Navigation extends Component {
             'open': this.state.open,
             'closing': this.state.closing
           }) }>
-          <li className="home">
-            <Link to="/homeowner" onClick={ this.closeNav }>homeowner</Link>
+          <li className="homeowner">
+            <NavLink
+              to="/homeowner"
+              onClick={ this.closeNav }
+              activeClassName="active">
+              homeowner
+            </NavLink>
           </li>
           <li className="developer">
-            <Link to="/developer" onClick={ this.closeNav }>developer</Link>
+            <NavLink
+              to="/developer"
+              onClick={ this.closeNav }
+              activeClassName="active">
+              developer
+            </NavLink>
           </li>
           <li className="experience">
-            <Link to="/experience" onClick={ this.closeNav }>past experience</Link>
+            <NavLink
+              to="/experience"
+              onClick={ this.closeNav }
+              activeClassName="active">
+              past experience
+            </NavLink>
           </li>
         </ul>
       </nav>
