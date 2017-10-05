@@ -10,45 +10,68 @@ const HomeOwner = function(props) {
         <div className="description">
           <div className="col">
             <p>
-              Creating places which enhance a home is always exciting.
-              From modest alterations, to creating new homes from
-              scratch, <b>studio teepee</b> can provide architectural
-              services tailored to suit each project:-
+              Creating, extending, or remodelling homes is always exciting.
+              We tailor our design approach to suit each clients priorities,
+              whether they are space, light, connection to the outdoors,
+              sustainability, materiality, simply ensuring the full potential
+              of each home is achieved, or normally – all of the above!
             </p>
-            <ul>
-              <li>Appraising opportunities for alterations,
-              extensions and new buildings;</li>
-              <li>Preparing planning and building regulations
-              applications;</li>
-              <li>Preparing tender information and
-              appointing contractors;</li>
-              <li>Contract administration;</li>
-              <li>Completion certification and sign-off</li>
-            </ul>
           </div>
+
           <div className="col">
             <p>
-              Our past projects have been challenging and diverse:-
+              From modest alterations, to creating new homes from scratch,
+              <b className="brand">studio teepee</b> can provide the full
+              range of architectural services:-
             </p>
             <ul>
-              <li>Extensions and alterations to listed buildings;
-              new build straw bale construction;</li>
-              <li>New homes in the open countryside;</li>
-              <li>Crafted extensions in tight urban settings;</li>
-              <li>Extensions and new homes within Conservation Areas;</li>
-              <li>The renovation and extension of an Airey
-              House (post-war prefabricated concrete frame
-              building), including a straw-bale extension;</li>
-              <li>Converting shops to become new homes</li>
+              <li>
+                Providing designs to remodel, extend, or create new homes
+              </li>
+              <li>
+                Preparing planning and building regulations applications
+              </li>
+              <li>
+                Preparing tender information and appointing contractors
+              </li>
+              <li>
+                Preparing construction information
+              </li>
+              <li>
+                Contract administration
+              </li>
             </ul>
           </div>
+
           <div className="col">
             <p>
-              We tailor our approach to suit each project, whether our clients’
-              priorities are space, light, connection to the outdoors,
-              sustainability, materiality, or simply to ensure the full
-              potential of each home is achieved.
+              Our past projects have been diverse, with each providing unique
+              challenges and interest:-
             </p>
+            <ul>
+              <li>
+                Extensions and alterations to listed buildings
+              </li>
+              <li>
+                Extensions and new homes within Conservation Areas
+              </li>
+              <li>
+                New homes in the open countryside
+              </li>
+              <li>
+                Crafted extensions in tight urban settings
+              </li>
+              <li>
+                The renovation and extension of post-war prefabricated
+                concrete frame buildings
+              </li>
+              <li>
+                New build straw bale construction
+              </li>
+              <li>
+                Converting shops to become new homes
+              </li>
+            </ul>
           </div>
         </div>
       </div>
