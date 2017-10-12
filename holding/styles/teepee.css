@@ -50,20 +50,18 @@ body {
 }
 
 body {
-  align-items: center;
-  display: flex;
-  flex-flow: row;
   font-size: 16px;
   line-height: 1.7;
 }
 
 .site {
+  margin: auto;
   width: 100%;
 }
 
 header {
   margin: 0 auto;
-  padding: 0;
+  padding: 20px 0 0;
   position: relative;
   width: 80%;
   min-width: 10em;
@@ -74,7 +72,7 @@ header .logo {
   background-size: contain;
   display: block;
   height: 20vh;
-  margin: 0 auto 12vh;
+  margin: 0 auto 20px;
   max-height: 122px;
   width: 70%;
 }
@@ -88,7 +86,7 @@ header h1 {
   font-weight: 700;
   font-size: 22px;
   line-height: 1.3;
-  margin: 0 0 45px;
+  margin: 0 0 30px;
 }
 
 header h1 span {
@@ -113,17 +111,17 @@ header a[class="email"]:active {
 }
 
 footer {
-  margin: 65px 0 20px;
+  margin: 30px 0 20px;
   text-align: center;
 }
 
-footer ul {
+footer .social {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-footer li {
+footer .social li {
   display: inline-block;
   font-size: 20px;
   height: 28px;
@@ -133,7 +131,7 @@ footer li {
   width: 28px;
 }
 
-footer a {
+footer .social a {
   border: 3px solid;
   border-radius: 50%;
   color: #091722;
@@ -144,26 +142,51 @@ footer a {
   width: 100%;
 }
 
-footer a .title {
+footer .social .title {
   font-size: 10px;
   left: 0;
   position: absolute;
   visibility: hidden;
 }
 
-@media print, screen and (min-width: 34em) {
+footer .ps {
+  margin: 40px auto 0;
+  max-width: 28em;
+  padding: 0 1em;
+  text-align: center;
+}
+
+footer .ps p {
+  margin: 0 0 12px;
+}
+
+footer .ps a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Anything as wide as landscape iPhone 5 */
+@media print, screen and (min-width: 568px) {
   body {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
     line-height: 1.2;
   }
 
   header {
     display: flex;
     flex-flow: row;
-    margin: 0 auto;
+    margin: 20px auto 0;
     max-width: 68em;
     padding: 0;
     position: relative;
     width: 90%;
+  }
+
+  header h1 {
+    line-height: 1;
+    margin-bottom: 25px;
   }
 
   header .logo {
@@ -182,12 +205,30 @@ footer a .title {
     width: 50%;
   }
 
-  header h1 {
-    line-height: 1;
-    margin: 0 0 40px;
-  }
-
   header h1 span {
     display: inline;
+  }
+
+  footer {
+    margin-top: 45px;
+  }
+
+  footer .ps {
+    margin-top: 45px;
+  }
+}
+
+/* Portrait iPad and greater */
+@media print, screen and (min-width: 768px) {
+  header h1 {
+    margin-bottom: 45px;
+  }
+
+  footer {
+    margin-top: 65px;
+  }
+
+  footer .ps {
+    margin-top: 65px;
   }
 }
