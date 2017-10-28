@@ -13,7 +13,7 @@
     width: 50%;
 
     span {
-      color: $near-black;
+      color: $white;
       font-size: 5vw;
       font-weight: $weight-regular;
       left: 50%;
@@ -40,7 +40,7 @@
     }
 
     &:hover::before {
-      background-color: transparentize($near-black, .1);
+      background-color: transparentize($black, .1);
     }
 
     &:hover span {

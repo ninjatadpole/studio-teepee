@@ -1,8 +1,10 @@
 header {
-  background: linear-gradient(to bottom, #{transparentize($aqua, 0)} 0%, #{transparentize($aqua, 0)} 75%, #{transparentize($aqua, 1)} 100%);
-  height: 100px;
+  $header-height: 90px;
+
+  background-color: transparentize($dark-grey, .05);
+  border-bottom: 1px solid transparentize($white, .3);
+  height: $header-height;
   left: 0;
-  padding: 0 $outer-margin;
   position: fixed;
   right: 0;
   z-index: 2;
@@ -10,46 +12,44 @@ header {
   .header-content {
     align-items: center;
     display: flex;
-    height: 100px;
+    height: $header-height;
     justify-content: flex-end;
   }
 
   .brand {
     @extend .col-xs-8;
-    @extend .col-md-5;
+    @extend .col-md-6;
 
-    $font-size: 20px;
+    $font-size: 22px;
 
     font-size: $font-size;
     font-weight: $weight-light;
     height: $nav-height;
-    left: 15px;
-    line-height: $font-size;
+    left: 0;
+    line-height: $nav-height;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 2;
 
     a {
-      color: $near-black;
+      color: $white;
       text-decoration: none;
     }
 
     .icon-logo {
       float: left;
-      font-size: $nav-height;
+      font-size: 44px;
       line-height: $nav-height;
       position: absolute;
     }
 
     .company {
       font-weight: $weight-regular;
-      padding-top: 8px;
       white-space: nowrap;
     }
 
-    .company,
-    .profession {
+    .company {
       display: block;
       padding-left: 64px;
     }
@@ -57,23 +57,22 @@ header {
     @include breakpoint(sm) {
       align-items: center;
       display: flex;
-      font-size: 24px;
+      font-size: 32px;
       line-height: $nav-height;
 
       .icon-logo {
+        font-size: $nav-height;
         position: relative;
       }
 
-      .company,
-      .profession {
+      .company {
         display: inline-block;
-        padding-left: .25em;
+        padding-left: 25px;
         padding-top: 0;
       }
     }
 
     @include breakpoint(md) {
-      font-size: 24px;
       left: 0;
       padding-right: 0;
       position: relative;

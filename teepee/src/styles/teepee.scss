@@ -1,17 +1,17 @@
 @import "reset-css/reset.scss";
 
-@import "grid";
+@import "global/grid";
 
-@import "colours";
-@import "typography";
-@import "variables";
+@import "global/colours";
+@import "global/typography";
+@import "global/variables";
 
-@import "page";
+@import "global/page";
 
-@import "footer";
-@import "header";
-@import "introduction";
-@import "main";
-@import "navigation";
+@import "components/footer";
+@import "components/header";
+@import "components/introduction";
+@import "components/main";
+@import "components/navigation";
 
-@import "home";
+@import "pages/home";

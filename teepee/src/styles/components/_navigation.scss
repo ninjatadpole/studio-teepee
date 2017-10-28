@@ -1,12 +1,13 @@
 .navigation {
   @extend .col-xs-12;
-  @extend .col-md-7;
+  @extend .col-md-6;
 
   display: flex;
   font-size: 20px;
-  font-weight: $weight-regular;
-  height: $nav-height;
+  font-weight: $weight-light;
+  height: 100%;
   justify-content: flex-end;
+  letter-spacing: 0;
   line-height: 1.25;
   position: relative;
   text-align: right;
@@ -18,8 +19,9 @@
     appearance: none;
     background: none;
     border: none;
-    font-size: 18px;
-    font-weight: $weight-regular;
+    color: $white;
+    font-size: 20px;
+    font-weight: $weight-light;
     height: 100%;
     line-height: 1;
     outline: none;
@@ -28,11 +30,11 @@
     white-space: nowrap;
 
     i {
-      padding-left: 4px;
+      padding-left: 8px;
     }
 
     @include breakpoint(sm) {
-      font-size: 18px;
+      font-size: 24px;
     }
   }
 
@@ -43,7 +45,7 @@
     padding: 0;
     position: absolute;
     right: 0;
-    top: calc(100% + 5px);
+    top: calc(100% + 1px);
     width: 100%;
 
     &.open {
@@ -53,11 +55,11 @@
 
     &.open,
     &.closing {
-      background: transparentize(lighten($aqua, 8%), .08);
-      border-radius: 4px;
+      background: transparentize($dark-grey, .05);
+      border-bottom: 1px solid transparentize($white, .3);
       display: block;
       padding: 8px 0;
-      transition: max-height 330ms ease-in-out, opacity 350ms ease-in-out;
+      transition: max-height 240ms ease-in-out, opacity 270ms ease-in-out;
     }
   }
 
@@ -67,24 +69,25 @@
   }
 
   a {
-    color: $blue-grey;
+    color: $mid-grey;
     display: block;
     padding: 6px 10px;
     text-decoration: none;
     transition: color 200ms ease-in-out;
 
     &.active {
-      color: $near-black;
+      color: $white;
     }
 
     &:hover {
-      color: $near-black;
+      color: $white;
     }
   }
 
   @include breakpoint(md) {
     display: block;
     font-size: 22px;
+    padding-left: 0;
 
     ul {
       align-items: center;
@@ -121,10 +124,10 @@
   }
 
   @include breakpoint(lg) {
-    font-size: 24px;
+    font-size: 19px;
 
     li {
-      margin-left: 22px;
+      margin-left: 18px;
     }
   }
 }
