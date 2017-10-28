@@ -6,6 +6,7 @@
   $mobile-menu-padding: 8px;
 
   display: flex;
+  font-size: 20px;
   font-weight: $weight-light;
   height: 100%;
   justify-content: flex-end;
@@ -32,12 +33,12 @@
     white-space: nowrap;
 
     i {
+      font-size: 21px;
       padding-left: 8px;
     }
   }
 
   ul {
-    font-size: 20px;
     max-height: 0;
     opacity: 0;
     overflow: hidden;
@@ -85,13 +86,13 @@
 
 
   @include breakpoint(sm) {
+    font-size: 20px;
+
     .mobile-nav-trigger {
       font-size: 22px;
     }
 
     ul {
-      font-size: 22px;
-
       &.open {
         max-height: ($menu-items * 35px) + ($mobile-menu-padding * 2);
       }
@@ -100,13 +101,13 @@
 
   @include breakpoint(md) {
     display: block;
+    font-size: 19px;
     height: $nav-height;
     padding-left: 0;
 
     ul {
       align-items: center;
       display: flex;
-      font-size: 22px;
       height: $nav-height;
       justify-content: flex-end;
       max-height: $nav-height;
@@ -140,8 +141,6 @@
   }
 
   @include breakpoint(lg) {
-    font-size: 19px;
-
     li {
       margin-left: 18px;
     }
