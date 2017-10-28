@@ -54,26 +54,42 @@ footer {
     @extend .col-sm-6;
     @extend .end-sm;
 
+    $logo-size: 30px;
+
     display: block;
 
     li {
       display: inline-block;
-      margin-left: 8px;
       position: relative;
+
+      &:not(:last-of-type) {
+        margin-right: 5px;
+      }
     }
 
     a {
-      $logo-size: 28px;
-
-      border: 3px solid;
+      border: 2.5px solid;
       border-radius: 50%;
       color: $white;
       display: inline-block;
-      font-size: 20px;
+      font-size: 18px;
       line-height: $logo-size;
       text-align: center;
       text-decoration: none;
       width: $logo-size;
+    }
+
+    .linkedin a {
+      line-height: $logo-size - 2;
+      width: $logo-size - 2;
+    }
+
+    .facebook a {
+      font-size: 19px;
+    }
+
+    .twitter a {
+      font-size: 20px;
     }
 
     .title {
