@@ -1,69 +1,98 @@
 footer {
-  @extend .center-xs;
-  @extend .start-sm;
+  padding-top: 22px;
+  padding-bottom: 28px;
 
-  padding-top: 50px;
-  padding-bottom: 34px;
+  .row {
+    @extend .middle-xs;
+    @extend .center-xs;
+  }
+
+  .membership {
+    @extend .col-xs-12;
+    @extend .col-sm-6;
+    @extend .col-md-3;
+    @extend .col-lg-4;
+
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+
+    li {
+      font-size: 24px;
+      padding: 0 12px;
+    }
+
+    .title {
+      font-size: 10px;
+      left: 0;
+      position: absolute;
+      visibility: hidden;
+    }
+  }
 
   .contact {
-    @extend .col-xs-10;
-    @extend .col-sm-6;
+    @extend .col-xs-12;
+    @extend .col-md-6;
+    @extend .col-lg-4;
+    @extend .last-xs;
 
-    font-size: 14px;
+    display: flex;
+    font-size: 12px;
     font-weight: $weight-regular;
     letter-spacing: 0;
-    padding-bottom: 20px;
+    line-height: 40px;
+    text-align: center;
 
-    abbr {
+    li {
       display: inline-block;
-      text-decoration: none;
-      width: 1.3rem;
-    }
 
-    .address span {
-      padding-right: .4rem;
+      &.icon-logo {
+        font-size: 30px;
+      }
 
-      &:not(:last-child)::after {
-        content: ',';
-        display: inline-block;
+      &.telephone,
+      &.email {
+        flex: 1;
+        position: relative;
+        top: -3px;
+      }
+
+      &.telephone {
+        padding-right: 4px;
+        text-align: right;
+      }
+      &.email {
+        padding-left: 4px;
+        text-align: left;
       }
     }
 
-    .phone a {
-      padding-right: .4rem;
-
-      &:not(:last-child)::after {
-        content: ' / ';
-        display: inline-block;
-        padding-left: .3rem;
-      }
-    }
 
     a {
       color: $white;
+      font-weight: $weight-light;
       text-decoration: none;
-    }
-
-    @include breakpoint(sm) {
-      padding-bottom: 0;
     }
   }
 
   .social {
-    @extend .col-xs-10;
+    @extend .col-xs-12;
     @extend .col-sm-6;
-    @extend .end-sm;
+    @extend .col-md-3;
+    @extend .col-lg-4;
+    @extend .last-md;
 
     $logo-size: 30px;
 
     display: block;
+    padding-bottom: 30px;
 
     li {
       display: inline-block;
       position: relative;
 
       &:not(:last-of-type) {
-        margin-right: 5px;
+        margin-right: 12px;
       }
     }
 
@@ -97,6 +126,48 @@ footer {
       left: 0;
       position: absolute;
       visibility: hidden;
+    }
+  }
+
+  @include breakpoint(sm) {
+    .membership {
+      li {
+        padding: 0 20px;
+      }
+    }
+  }
+
+  @include breakpoint(md) {
+    .membership {
+      padding-bottom: 0;
+
+      li {
+        font-size: 18px;
+        line-height: 46px;
+        padding: 0;
+
+        &:not(:last-of-type) {
+          margin-right: 18px;
+        }
+      }
+    }
+
+    .social {
+      padding-bottom: 0;
+      text-align: right;
+    }
+  }
+
+  @include breakpoint(lg) {
+    .membership {
+      li {
+        font-size: 30px;
+        line-height: 60px;
+
+        &:not(:last-of-type) {
+          margin-right: 24px;
+        }
+      }
     }
   }
 }
