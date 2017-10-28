@@ -59,28 +59,36 @@ class Navigation extends Component {
             'open': this.state.open,
             'closing': this.state.closing
           }) }>
-          <li className="homeowner">
+          <li className="about">
             <NavLink
-              to="/homeowner"
+              to="/"
               onClick={ this.closeNav }
               activeClassName="active">
-              homeowner
+              about
             </NavLink>
           </li>
-          <li className="developer">
+          <li className="projects">
             <NavLink
-              to="/developer"
+              to="/projects"
               onClick={ this.closeNav }
               activeClassName="active">
-              developer
+              projects
             </NavLink>
           </li>
-          <li className="experience">
+          <li className="approach">
             <NavLink
-              to="/experience"
+              to="/approach"
               onClick={ this.closeNav }
-              activeClassName="active">
-              past experience
+              activeClassName="approach">
+              approach
+            </NavLink>
+          </li>
+          <li className="contact">
+            <NavLink
+              to="/contact"
+              onClick={ this.closeNav }
+              activeClassName="contact">
+              contact
             </NavLink>
           </li>
         </ul>

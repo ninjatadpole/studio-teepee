@@ -19,20 +19,18 @@ const App = () => (
 
 const Contents = (props) => {
   return (
-    <div>
-      <div className="teepee wrapper container-fluid">
-        <Header />
+    <div className="teepee container-fluid">
+      <Header />
 
-        <Switch>
-          <Route exact path="/" component={ Home }/>
-          <Route path="/developer" component={ Developer }/>
-          <Route path="/experience" component={ PastExperience }/>
-          <Route path="/homeowner" component={ HomeOwner }/>
-          <Route component={ Home }/>
-        </Switch>
+      <Switch>
+        <Route exact path="/" component={ Home }/>
+        <Route path="/developer" component={ Developer }/>
+        <Route path="/experience" component={ PastExperience }/>
+        <Route path="/homeowner" component={ HomeOwner }/>
+        <Route component={ Home }/>
+      </Switch>
 
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }

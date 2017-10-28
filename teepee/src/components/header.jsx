@@ -17,17 +17,18 @@ class Header extends React.Component {
 
   render() {
     return (
-      <header className="wrapper">
-        <div className="row header-content">
-          <p className="brand">
-            <Link to="/" onClick={ this.closeNav }>
-              <i className="icon-logo" />
-              <b className="company">studio teepee</b>
-              <span className="profession">architects</span>
-            </Link>
-          </p>
+      <header>
+        <div className="wrapper">
+          <div className="header-content">
+            <p className="brand">
+              <Link to="/" onClick={ this.closeNav }>
+                <i className="icon-logo" />
+                <b className="company">studio teepee</b>
+              </Link>
+            </p>
 
-          <Navigation registerCloseNav={ this.registerCloseNav } />
+            <Navigation registerCloseNav={ this.registerCloseNav } />
+          </div>
         </div>
       </header>
     );
