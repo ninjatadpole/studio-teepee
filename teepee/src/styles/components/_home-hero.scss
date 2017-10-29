@@ -3,6 +3,7 @@
 
   padding-bottom: 10px;
   position: relative;
+  text-shadow: 1px 1px 1px transparentize($black, .85);
 
   img {
     display: none;
@@ -12,7 +13,6 @@
     display: block;
     font-size: 38px;
     line-height: 46px;
-    text-shadow: 0 0 2px transparentize($black, .8);
     word-spacing: -2px;
   }
 
@@ -22,7 +22,6 @@
     font-size: 22px;
     line-height: 26px;
     margin-top: 15px;
-    text-shadow: 0 0 2px transparentize($black, .8);
   }
 
   figure {
@@ -88,7 +87,8 @@
   }
 
   @include breakpoint(md) {
-    border: none;
+    // text-shadow: none;
+
     img {
       display: block;
       width: 100%;
@@ -97,7 +97,6 @@
     q {
       font-size: 41px;
       line-height: 50px;
-      // text-shadow: none;
       word-spacing: -3px;
     }
 
@@ -105,7 +104,6 @@
       font-size: 24px;
       line-height: 28px;
       margin-top: 15px;
-      // text-shadow: none;
     }
 
     figure {
