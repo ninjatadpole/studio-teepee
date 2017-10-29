@@ -41,10 +41,12 @@ function Hero (props) {
   const hero = heroes[ version ];
 
   return (
-    <figure className={`home-hero home-hero-${version}`}>
-      <img src={ hero.image } alt="" />
-      { hero.caption }
-    </figure>
+    <section className={`home-hero home-hero-${version}`}>
+      <figure>
+        <img src={ hero.image } alt="" />
+        { hero.caption }
+      </figure>
+    </section>
   )
 }
 
