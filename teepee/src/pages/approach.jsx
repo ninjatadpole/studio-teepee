@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Developer = function(props) {
+const Approach = function(props) {
   return (
-    <main className="page-developer">
+    <main className="page-approach">
       <div className="introduction">
 
-        <h1>developer</h1>
+        <h1>approach</h1>
 
         <div className="description">
           <div className="col">
@@ -75,4 +75,4 @@ const Developer = function(props) {
   );
 }
 
-export default Developer;
+export default Approach;

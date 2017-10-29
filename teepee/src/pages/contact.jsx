@@ -1,11 +1,11 @@
 import React from 'react';
 
-const HomeOwner = function(props) {
+const Contact = function(props) {
   return (
-    <main className="page-homeowner">
+    <main className="page-contact">
       <div className="introduction">
 
-        <h1>homeowner</h1>
+        <h1>contact</h1>
 
         <div className="description">
           <div className="col">
@@ -79,4 +79,4 @@ const HomeOwner = function(props) {
   );
 }
 
-export default HomeOwner;
+export default Contact;

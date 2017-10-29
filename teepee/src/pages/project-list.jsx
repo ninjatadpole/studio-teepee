@@ -1,11 +1,11 @@
 import React from 'react';
 
-const PastExperience = function(props) {
+const ProjectList = function(props) {
   return (
-    <main className="page-past-experience">
+    <main className="page-project-list">
       <div className="introduction">
 
-        <h1>past experience</h1>
+        <h1>projects</h1>
 
         <div className="description">
           <div className="col">
@@ -86,4 +86,4 @@ const PastExperience = function(props) {
   );
 }
 
-export default PastExperience;
+export default ProjectList;
