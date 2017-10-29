@@ -1,20 +1,4 @@
 main {
-  $padding: 100px;
-  padding-top: $padding;
-
-  &.page-home {
-    padding-top: 100px !important;
-  }
-
-  @include breakpoint(sm) {
-    padding-top: $padding + 10px;
-  }
-
-  @include breakpoint(md) {
-    padding-top: $padding + 20px;
-  }
-
-  @include breakpoint(lg) {
-    padding-top: $padding + 30px;
-  }
+  $padding: $header-height;
+  padding-top: $padding + 10px;
 }
