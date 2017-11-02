@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import heroImage1 from '../../assets/images/home-hero-1.jpg';
 import heroImage2 from '../../assets/images/home-hero-2.jpg';
 
-function Hero (props) {
+function HomeHero (props) {
   const { version } = props;
 
   const heroes = [
@@ -50,8 +50,8 @@ function Hero (props) {
   )
 }
 
-Hero.propTypes = {
+HomeHero.propTypes = {
   version: PropTypes.oneOf([1, 2]),
 }
 
-export default Hero;
+export default HomeHero;

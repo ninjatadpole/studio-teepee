@@ -1,0 +1,114 @@
+.home-contact {
+  @extend .col-xs-12;
+
+  margin: 0 10px;
+  padding-bottom: 10px;
+  position: relative;
+  text-shadow: 1px 1px 1px transparentize($black, .85);
+
+  .content {
+    @extend .row;
+
+    background: url('../assets/images/home-matt-plummer.jpg') top center no-repeat;
+    background-size: cover;
+  }
+
+  .quotation {
+    @extend .col-xs-6;
+
+    font-size: 41px;
+    line-height: 50px;
+    padding: 396px 20px 0;
+    text-align: center;
+    word-spacing: -3px;
+  }
+
+  .intro {
+    @extend .col-xs-3;
+
+    font-size: 15px;
+    font-weight: $weight-light;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    padding-bottom: 30px;
+    padding-top: 40px;
+    word-spacing: -2px;
+
+    p:not(:last-of-type) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .form {
+    @extend .col-xs-3;
+
+    font-size: 15px;
+    font-weight: $weight-regular;
+    letter-spacing: 0;
+    line-height: 20px;
+    padding-bottom: 30px;
+    padding-top: 40px;
+    word-spacing: -2px;
+  }
+
+  fieldset {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+
+    .actions {
+      margin: 0;
+    }
+  }
+
+  label {
+    position: absolute;
+    top: -2000px;
+    visibility: hidden;
+  }
+
+  input,
+  textarea {
+    width: calc(100% - 6px - 18px);
+    background: transparent;
+    border: 3px solid $white;
+    color: $white;
+    font-size: 16px;
+    font-weight: $weight-light;
+    line-height: 30px;
+    padding: 6px 9px;
+
+    &::-webkit-input-placeholder {
+      color: $white;
+    }
+  }
+
+  input {
+    height: 30px;
+
+    &[type='submit'] {
+      position: absolute;
+      visibility: hidden;
+    }
+  }
+
+  button.submit {
+    background: transparent;
+    border: 0;
+    color: $white;
+    display: block;
+    font-size: 18px;
+    font-weight: $weight-light;
+    height: 30px;
+    padding: 6px 12px;
+    position: absolute;
+    right: 3px;
+    top: -60px;
+    width: auto;
+  }
+
+  textarea {
+    height: 320px;
+    resize: none;
+  }
+}

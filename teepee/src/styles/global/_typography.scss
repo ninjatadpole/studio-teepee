@@ -4,11 +4,18 @@ $weight-bold: 700;
 
 html,
 body,
-button {
+button,
+input,
+textarea {
   font-family: "Josefin Sans", sans-serif;
   font-weight: $weight-regular;
   letter-spacing: -1px;
   line-height: 1.45;
+}
+
+.brand {
+  font-weight: $weight-regular;
+  white-space: nowrap;
 }
 
 @font-face {
