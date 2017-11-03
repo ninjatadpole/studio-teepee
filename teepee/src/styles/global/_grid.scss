@@ -42,4 +42,10 @@ $breakpoints: $breakpoint-list;
       display: inherit;
     }
   }
+
+  @include breakpoint(#{$key}) {
+    .col-#{$key}-offset-0 {
+      margin-left: 0;
+    }
+  }
 }
