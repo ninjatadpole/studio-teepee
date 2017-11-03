@@ -8,17 +8,21 @@ function HomeWhy (props) {
     <section className="home-why">
       <div className="content">
         <div className="why-teepee">
-          <h1>Why ‘studio teepee’?</h1>
-          <p>
-            <span className="brand">teepees</span> are elegant, practical,
-            and efficient.  They are sustainable and economic, yet
-            delightful and fun (just look at their glamping appeal!).
-          </p>
-          <p>
-            <span className="brand">studio teepee</span> aspires to embody
-            these values in the buildings and places we live in
-          </p>
-          <img src={ teepeeSrc } alt="" />
+          <div className="content-group">
+            <h1>Why ‘Studio Teepee’</h1>
+            <p>
+              <span className="brand">teepees</span> are elegant, practical,
+              and efficient.  They are sustainable and economic, yet
+              delightful and fun (just look at their glamping appeal!).
+            </p>
+            <p>
+              <span className="brand">studio teepee</span> aspires to embody
+              these values in the buildings and places we live in
+            </p>
+          </div>
+          <div className="content-group">
+            <img src={ teepeeSrc } alt="" />
+          </div>
         </div>
 
         <div className="why-work">
