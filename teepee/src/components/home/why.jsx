@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import teepeeSrc from '../../assets/images/home-teepee.jpg';
 
@@ -40,9 +39,6 @@ function HomeWhy (props) {
       </div>
     </section>
   )
-}
-
-HomeWhy.propTypes = {
 }
 
 export default HomeWhy;
