@@ -6,43 +6,43 @@
 
   .content {
     @extend .row;
-
-    background: url('../assets/images/home-matt-plummer.jpg') 12% 0 no-repeat;
-    background-size: cover;
-  }
-
-  .reason {
-    @extend .col-xs-12;
-    @extend .col-sm-6;
-    @extend .col-sm-offset-6;
-    @extend .col-md-offset-6;
-    @extend .col-lg-offset-0;
-
-    font-size: 41px;
-    line-height: 50px;
-    padding: 40px 40px 120px;
-    text-align: center;
-    word-spacing: -3px;
   }
 
   .content-group {
     @extend .col-xs-12;
-    @extend .col-lg-6;
+    @extend .col-sm-7;
+    @extend .col-md-8;
+    @extend .col-lg-9;
     @extend .row;
 
+    background: url('../assets/images/home-matt-plummer.jpg') 15% -10px no-repeat;
+    background-size: cover;
     margin: 0;
+  }
+
+  .reason {
+    @extend .col-xs-12;
+    @extend .col-md-6;
+    @extend .col-lg-8;
+
+    font-size: 30px;
+    line-height: 40px;
+    padding: 230px 15px 0;
+    text-align: left;
+    word-spacing: -3px;
   }
 
   .intro {
     @extend .col-xs-12;
-    @extend .col-sm-6;
+    @extend .col-md-6;
+    @extend .col-lg-4;
 
     font-size: 16px;
     font-weight: $weight-light;
     letter-spacing: 0.5px;
     line-height: 20px;
     padding-bottom: 30px;
-    padding-top: 40px;
+    padding-top: 30px;
     word-spacing: -2px;
 
     p:not(:last-of-type) {
@@ -52,15 +52,45 @@
 
   .form {
     @extend .col-xs-12;
-    @extend .col-sm-6;
+    @extend .col-sm-5;
+    @extend .col-md-4;
+    @extend .col-lg-3;
 
+    background: $very-dark-grey;
     font-size: 16px;
     font-weight: $weight-regular;
     letter-spacing: 0;
     line-height: 20px;
     padding-bottom: 10px;
-    padding-top: 0px;
+    padding-top: 20px;
+    position: relative;
     word-spacing: -2px;
+
+    &.sending::after,
+    &.sent::after {
+      align-items: center;
+      background: transparentize($white, .2);
+      content: '';
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    &.sending::after {
+      color: transparentize($black, .2);
+      content: 'Sending...';
+      font-size: 19px;
+    }
+
+    &.sent::after {
+      color: $black;
+      content: 'Message sent!';
+      font-size: 24px;
+    }
   }
 
   fieldset {
@@ -100,7 +130,7 @@
   }
 
   textarea {
-    height: 320px;
+    height: 260px;
     padding-bottom: 26px;
     resize: none;
   }
@@ -131,12 +161,31 @@
   }
 
   @include breakpoint(sm) {
+    .content {
+      background: url('../assets/images/home-matt-plummer.jpg') 10% 0 no-repeat;
+      background-size: cover;
+    }
+
+    .content-group {
+      background: none;
+    }
+
     .reason {
-      padding: 50px 20px 50px;
+      font-size: 34px;
+      line-height: 42px;
+      padding: 200px 20px 30px;
     }
 
     .intro {
       padding-top: 0;
+      padding-bottom: 10px;
+    }
+
+    .form {
+      background: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
 
     textarea {
@@ -145,8 +194,18 @@
   }
 
   @include breakpoint(md) {
-    textarea {
-      height: 200px;
+    .reason {
+      padding: 260px 10px 0;
+      text-align: center;
+    }
+
+    .intro {
+      padding-top: 40px;
+    }
+
+    .form {
+      justify-content: flex-start;
+      padding-top: 40px;
     }
   }
 
@@ -154,6 +213,8 @@
     background-position: left top;
 
     .reason {
+      font-size: 41px;
+      line-height: 50px;
       padding: 396px 30px 0;
     }
 

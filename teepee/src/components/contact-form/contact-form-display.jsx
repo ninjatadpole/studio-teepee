@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
-import Input from '../../input';
+import Input from '../input';
 
 function HomeContactFormDisplay (props) {
-  const { formAction, handleSubmit } = props;
+  const { addInputRef, formAction, handleSubmit } = props;
 
   return (
     <form
       action={ formAction }
-      className="form"
+      className={ classnames('form', props.className) }
       method="post"
       onSubmit={ handleSubmit }
     >
@@ -18,30 +19,33 @@ function HomeContactFormDisplay (props) {
         you to discuss your future project
       </p>
       <fieldset>
-        <label for="contact-name">name</label>
+        <label htmlFor="contact-name">name</label>
         <Input
           type="text"
           id="contact-name"
           name="name"
           placeholder="name"
+          onElementMount={ addInputRef }
         />
       </fieldset>
       <fieldset>
-        <label for="contact-contact">contact no / email</label>
+        <label htmlFor="contact-contact">contact no / email</label>
         <Input
           type="text"
           id="contact-contact"
           name="contact"
           placeholder="contact no / email"
+          onElementMount={ addInputRef }
         />
       </fieldset>
       <fieldset>
-        <label for="contact-message">comments</label>
+        <label htmlFor="contact-message">comments</label>
         <Input
           type="textarea"
           id="contact-message"
           name="message"
           placeholder="comments"
+          onElementMount={ addInputRef }
         />
       </fieldset>
       <fieldset className="actions">
@@ -53,6 +57,7 @@ function HomeContactFormDisplay (props) {
 }
 
 HomeContactFormDisplay.propTypes = {
+  addInputRef: PropTypes.func.isRequired,
   formAction: PropTypes.string.isRequired,
   handleSubmit: PropTypes.func.isRequired,
 }

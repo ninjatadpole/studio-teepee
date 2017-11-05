@@ -1,14 +1,14 @@
 import React from 'react';
 
-import ContactForm from './contact-form';
+import ContactForm from '../contact-form';
 
 function HomeContact (props) {
   return (
     <section className="home-contact">
       <div className="content">
-        <q className="reason">I create places that make people happy.</q>
-
         <div className="content-group">
+          <q className="reason">I create places that make people happy.</q>
+
           <div className="intro">
             <p>
               My name is Matt Plummer. I am an Architect, and I
@@ -36,9 +36,9 @@ function HomeContact (props) {
               buildings.
             </p>
           </div>
-
-          <ContactForm />
         </div>
+
+        <ContactForm />
       </div>
     </section>
   )
