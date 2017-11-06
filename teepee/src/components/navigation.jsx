@@ -61,6 +61,7 @@ class Navigation extends Component {
           }) }>
           <li className="about">
             <NavLink
+              exact
               to="/"
               onClick={ this.closeNav }
               activeClassName="active">
@@ -79,7 +80,7 @@ class Navigation extends Component {
             <NavLink
               to="/approach"
               onClick={ this.closeNav }
-              activeClassName="approach">
+              activeClassName="active">
               approach
             </NavLink>
           </li>
@@ -87,7 +88,7 @@ class Navigation extends Component {
             <NavLink
               to="/contact"
               onClick={ this.closeNav }
-              activeClassName="contact">
+              activeClassName="active">
               contact
             </NavLink>
           </li>
