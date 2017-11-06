@@ -13,7 +13,8 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.14",
     "reset-css": "^2.2.1",
-    "sass-breakpoints": "^2.1.0"
+    "sass-breakpoints": "^2.1.0",
+    "xhr": "^2.4.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",

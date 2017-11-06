@@ -5,7 +5,15 @@ import classnames from 'classnames';
 import Input from '../input';
 
 function HomeContactFormDisplay (props) {
-  const { addInputRef, formAction, handleSubmit } = props;
+  const {
+    addInputRef,
+    errorMsg,
+    formAction,
+    handleSubmit
+  } = props;
+
+  const mailAddress = 'hello@studioteepee.co.uk';
+  const mailBody = errorMsg;
 
   return (
     <form
@@ -52,12 +60,22 @@ function HomeContactFormDisplay (props) {
         <input type="submit" />
         <button className="submit" onClick={ handleSubmit }>send</button>
       </fieldset>
+      <p className="message">
+        <span className="sending">Sending...</span>
+        <span className="sent">Message sent!</span>
+        <span className="error">
+          There was a problem with this form.<br />
+          You can <a href={ `mailto:${mailAddress}?body=${mailBody}` }>click
+          here to send your message by email</a> instead.
+        </span>
+      </p>
     </form>
   )
 }
 
 HomeContactFormDisplay.propTypes = {
   addInputRef: PropTypes.func.isRequired,
+  errorMsg: PropTypes.string,
   formAction: PropTypes.string.isRequired,
   handleSubmit: PropTypes.func.isRequired,
 }

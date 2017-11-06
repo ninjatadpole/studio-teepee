@@ -38,7 +38,7 @@ function HomeContact (props) {
           </div>
         </div>
 
-        <ContactForm />
+        <ContactForm page="home page" />
       </div>
     </section>
   )

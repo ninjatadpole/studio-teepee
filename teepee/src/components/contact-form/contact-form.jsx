@@ -1,5 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import xhr from 'xhr';
+import classnames from 'classnames';
 
 import HomeContactFormDisplay from './contact-form-display';
 
@@ -8,14 +10,19 @@ class HomeContactForm extends React.Component {
     super(props);
 
     this.state = {
+      formError: null,
       formSending: false,
       formSent: false,
+      location: {
+        'page': props.page,
+      },
     }
 
     this.addInputRef = this.addInputRef.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.makeErrorEmail = this.makeErrorEmail.bind(this);
 
-    this.formAction = "http://demo.studioteepee.co.uk/contact-handler.php";
+    this.formAction = "/contact-handler.php";
     this.formElements = [];
   }
 
@@ -42,41 +49,88 @@ class HomeContactForm extends React.Component {
         [input.name]: input.element.value}
     }, {});
 
-    this.submitForm(formData);
+    this.submitForm({
+      ...formData,
+      ...this.state.location,
+    });
   }
 
   submitForm(formData) {
-    const request = xhr({
-      body: formData,
+    xhr({
+      data: formData,
       json: true,
+      method: 'POST',
       url: this.formAction,
-      method:'POST',
-    }, function (err, resp, body) {
+    }, (err, resp, body) => {
       if(err) {
-        console.error('WAS ERR', err)
+        this.setState({
+          formError: formData,
+          formSending: false,
+        })
       } else {
         this.setState({
+          formSending: false,
           formSent: true,
-        })
+        });
       }
-    })
+    });
+  }
+
+  makeErrorEmail() {
+    const formData = this.state.formError;
+
+    if (formData) {
+      const introParts = [
+        "Hello studio teepee.",
+        "I tried to use the form on your website but it didn't work.",
+        "Here is what I tried to let you know...",
+        "",
+      ];
+
+      const formParts = [
+        ...(Object.keys(formData).map((key, index) => {
+          return `${key}: "${formData[key]}"`;
+        }))
+      ];
+
+      return encodeURIComponent([
+        ...introParts,
+        ...formParts,
+      ].join("\r\n"));
+    } else {
+      return '';
+    }
   }
 
   render() {
-    const { addInputRef, formAction, handleSubmit } = this;
-    const { formSending, formSent } = this.state;
+    const {
+      addInputRef,
+      formAction,
+      handleSubmit,
+      makeErrorEmail,
+    } = this;
+    const { formError, formSending, formSent } = this.state;
 
     return (
       <HomeContactFormDisplay
         { ...{
           addInputRef,
-          className: (formSent ? 'sent' : (formSending ? 'sending' : '')),
+          className: classnames({
+            sent: formSent,
+            sending: formSending,
+            error: formError,
+          }),
+          errorMsg: makeErrorEmail(),
           formAction,
           handleSubmit
         } }
       />
     );
   }
+}
+
+HomeContactForm.propTypes = {
+  page: PropTypes.string.isRequired,
 }
 
 export default HomeContactForm;
