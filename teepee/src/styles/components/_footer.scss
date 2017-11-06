@@ -36,6 +36,7 @@ footer {
     @extend .col-lg-4;
     @extend .last-xs;
 
+    color: $white;
     display: flex;
     font-size: 12px;
     font-weight: $weight-regular;
@@ -67,9 +68,7 @@ footer {
       }
     }
 
-
     a {
-      color: $white;
       font-weight: $weight-light;
       text-decoration: none;
     }

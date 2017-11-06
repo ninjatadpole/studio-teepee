@@ -18,6 +18,10 @@ textarea {
   white-space: nowrap;
 }
 
+a {
+  color: inherit;
+}
+
 @font-face {
   font-family: "teepee-icons";
   src: url("../assets/fonts/teepee-icons.woff") format("woff");

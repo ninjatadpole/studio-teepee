@@ -20,6 +20,7 @@ header {
 
     $font-size: 22px;
 
+    color: $white;
     font-size: $font-size;
     font-weight: $weight-light;
     height: $nav-height;
@@ -31,7 +32,6 @@ header {
     z-index: 2;
 
     a {
-      color: $white;
       text-decoration: none;
     }
 
