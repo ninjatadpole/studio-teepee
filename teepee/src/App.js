@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import HomePage from './pages/home.jsx';
-import ApproachPage from './pages/approach.jsx';
-import ContactPage from './pages/contact.jsx';
-import ProjectListPage from './pages/project-list.jsx';
+import HomePage from './pages/home';
+import ApproachPage from './pages/approach';
+import ContactPage from './pages/contact';
+import ProjectListPage from './pages/project-list';
 
-import Footer from './components/footer.jsx';
-import Header from './components/header.jsx';
+import Footer from './components/footer';
+import Header from './components/header';
 
 import './styles/teepee.css';
 
