@@ -1,20 +1,70 @@
 .page-contact {
   @extend .wrapper;
 
+  h1 {
+    font-size: 42px;
+    letter-spacing: -1.5px;
+    line-height: 48px;
+    margin: 0;
+    padding: 18px 10px 14px;
+    word-spacing: -2px;
+  }
+
   .content {
     @extend .row;
 
     background: url('../assets/images/home-matt-plummer.jpg') center no-repeat;
     background-size: cover;
+    margin: 0 10px;
   }
 
   .contact-types {
     @extend .col-xs-3;
     @extend .col-xs-offset-6;
+
+    padding-top: 80px;
+
+    dt {
+      font-size: 17px;
+      font-weight: $weight-light;
+      letter-spacing: 0;
+    }
+
+    dd {
+      font-size: 17px;
+      letter-spacing: 0;
+      margin-bottom: 24px;
+    }
+
+    .privacy {
+      font-size: 12px;
+      font-weight: $weight-light;
+      letter-spacing: 0;
+      margin: 40px 0 80px;
+    }
   }
 
   .contact-form {
     @extend .col-xs-3;
-    @extend .col-xs-offset-6;
+
+    padding-top: 80px;
+
+    p {
+      display: none;
+    }
+
+    fieldset:first-of-type {
+      margin: 0;
+    }
+
+    textarea {
+      height: 310px;
+    }
+  }
+
+  @include breakpoint(sm) {
+    .contact-form {
+      background: none;
+    }
   }
 }
