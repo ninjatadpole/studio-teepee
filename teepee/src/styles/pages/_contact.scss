@@ -1,0 +1,20 @@
+.page-contact {
+  @extend .wrapper;
+
+  .content {
+    @extend .row;
+
+    background: url('../assets/images/home-matt-plummer.jpg') center no-repeat;
+    background-size: cover;
+  }
+
+  .contact-types {
+    @extend .col-xs-3;
+    @extend .col-xs-offset-6;
+  }
+
+  .contact-form {
+    @extend .col-xs-3;
+    @extend .col-xs-offset-6;
+  }
+}

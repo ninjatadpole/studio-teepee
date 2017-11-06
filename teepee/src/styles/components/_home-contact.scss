@@ -50,143 +50,11 @@
     }
   }
 
-  .form {
+  .contact-form {
     @extend .col-xs-12;
     @extend .col-sm-5;
     @extend .col-md-4;
     @extend .col-lg-3;
-
-    background: $very-dark-grey;
-    font-size: 16px;
-    font-weight: $weight-regular;
-    letter-spacing: 0;
-    line-height: 20px;
-    padding-bottom: 10px;
-    padding-top: 20px;
-    position: relative;
-    word-spacing: -2px;
-
-    .message {
-      align-items: center;
-      background: transparentize($white, .2);
-      display: none;
-      height: 100%;
-      justify-content: center;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
-
-    &.sending,
-    &.sent,
-    &.error {
-      .message {
-        display: flex;
-      }
-    }
-
-    &.sending .sending,
-    &.sent .sent,
-    &.error .error {
-      display: block;
-      padding: 40px 20px;
-    }
-  }
-
-  .message {
-    .sending {
-      color: transparentize($black, .2);
-      display: none;
-      font-size: 19px;
-      line-height: 26px;
-    }
-
-    .sent {
-      color: $black;
-      display: none;
-      font-size: 24px;
-      line-height: 32px;
-    }
-
-    .error {
-      color: $black;
-      display: none;
-      font-size: 19px;
-      line-height: 26px;
-
-      a {
-        color: $black;
-      }
-    }
-  }
-
-  fieldset {
-    margin-top: 20px;
-    position: relative;
-    width: 100%;
-
-    .actions {
-      margin: 0;
-    }
-
-    &:last-of-type {
-      margin: 0;
-    }
-  }
-
-  label {
-    position: absolute;
-    top: -2000px;
-    visibility: hidden;
-  }
-
-  input,
-  textarea {
-    width: calc(100% - 6px - 18px);
-    background: transparent;
-    border: 3px solid $white;
-    color: $white;
-    font-size: 16px;
-    font-weight: $weight-light;
-    line-height: 30px;
-    padding: 6px 9px;
-
-    &::-webkit-input-placeholder {
-      color: transparentize($white, .2);
-    }
-  }
-
-  textarea {
-    height: 260px;
-    line-height: 24px;
-    padding-bottom: 26px;
-    resize: none;
-  }
-
-  input {
-    height: 30px;
-
-    &[type='submit'] {
-      position: absolute;
-      visibility: hidden;
-    }
-  }
-
-  button.submit {
-    background: transparent;
-    border: 0;
-    color: $white;
-    cursor: pointer;
-    display: block;
-    font-size: 18px;
-    font-weight: $weight-light;
-    height: 30px;
-    padding: 6px 12px;
-    position: absolute;
-    right: 3px;
-    top: -40px;
-    width: auto;
   }
 
   @include breakpoint(sm) {
@@ -210,7 +78,7 @@
       padding-bottom: 10px;
     }
 
-    .form {
+    .contact-form {
       background: none;
       display: flex;
       flex-direction: column;
@@ -232,7 +100,7 @@
       padding-top: 40px;
     }
 
-    .form {
+    .contact-form {
       justify-content: flex-start;
       padding-top: 40px;
     }
@@ -252,7 +120,7 @@
       padding-top: 40px;
     }
 
-    .form {
+    .contact-form {
       font-size: 15px;
       padding-bottom: 30px;
       padding-top: 40px;

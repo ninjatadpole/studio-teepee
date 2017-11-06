@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import xhr from 'xhr';
 import classnames from 'classnames';
 
-import HomeContactFormDisplay from './contact-form-display';
+import ContactFormDisplay from './contact-form-display';
 
-class HomeContactForm extends React.Component {
+class ContactForm extends React.Component {
   constructor(props) {
     super(props);
 
@@ -112,7 +112,7 @@ class HomeContactForm extends React.Component {
     const { formError, formSending, formSent } = this.state;
 
     return (
-      <HomeContactFormDisplay
+      <ContactFormDisplay
         { ...{
           addInputRef,
           className: classnames({
@@ -129,8 +129,8 @@ class HomeContactForm extends React.Component {
   }
 }
 
-HomeContactForm.propTypes = {
+ContactForm.propTypes = {
   page: PropTypes.string.isRequired,
 }
 
-export default HomeContactForm;
+export default ContactForm;

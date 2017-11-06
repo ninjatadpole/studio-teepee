@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 import Input from '../input';
 
-function HomeContactFormDisplay (props) {
+function ContactFormDisplay (props) {
   const {
     addInputRef,
     errorMsg,
@@ -18,7 +18,7 @@ function HomeContactFormDisplay (props) {
   return (
     <form
       action={ formAction }
-      className={ classnames('form', props.className) }
+      className={ classnames('contact-form', props.className) }
       method="post"
       onSubmit={ handleSubmit }
     >
@@ -73,11 +73,11 @@ function HomeContactFormDisplay (props) {
   )
 }
 
-HomeContactFormDisplay.propTypes = {
+ContactFormDisplay.propTypes = {
   addInputRef: PropTypes.func.isRequired,
   errorMsg: PropTypes.string,
   formAction: PropTypes.string.isRequired,
   handleSubmit: PropTypes.func.isRequired,
 }
 
-export default HomeContactFormDisplay;
+export default ContactFormDisplay;
