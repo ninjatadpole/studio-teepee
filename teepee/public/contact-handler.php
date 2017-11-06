@@ -4,8 +4,8 @@ if (empty($json)) {
    exit;
 }
 
-$emailTo = "andy@sharpfrog.com";
-//$emailTo = "hello@studioteepee.co.uk";
+//$emailTo = "andy@sharpfrog.com";
+$emailTo = "hello@studioteepee.co.uk";
 
 $contact = "";
 $name = "";
