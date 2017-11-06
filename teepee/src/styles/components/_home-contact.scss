@@ -66,12 +66,10 @@
     position: relative;
     word-spacing: -2px;
 
-    &.sending::after,
-    &.sent::after {
+    .message {
       align-items: center;
       background: transparentize($white, .2);
-      content: '';
-      display: flex;
+      display: none;
       height: 100%;
       justify-content: center;
       left: 0;
@@ -80,16 +78,46 @@
       width: 100%;
     }
 
-    &.sending::after {
-      color: transparentize($black, .2);
-      content: 'Sending...';
-      font-size: 19px;
+    &.sending,
+    &.sent,
+    &.error {
+      .message {
+        display: flex;
+      }
     }
 
-    &.sent::after {
+    &.sending .sending,
+    &.sent .sent,
+    &.error .error {
+      display: block;
+      padding: 40px 20px;
+    }
+  }
+
+  .message {
+    .sending {
+      color: transparentize($black, .2);
+      display: none;
+      font-size: 19px;
+      line-height: 26px;
+    }
+
+    .sent {
       color: $black;
-      content: 'Message sent!';
+      display: none;
       font-size: 24px;
+      line-height: 32px;
+    }
+
+    .error {
+      color: $black;
+      display: none;
+      font-size: 19px;
+      line-height: 26px;
+
+      a {
+        color: $black;
+      }
     }
   }
 
@@ -131,6 +159,7 @@
 
   textarea {
     height: 260px;
+    line-height: 24px;
     padding-bottom: 26px;
     resize: none;
   }
