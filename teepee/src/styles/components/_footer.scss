@@ -75,58 +75,14 @@ footer {
     }
   }
 
-  .social {
+  .social-links {
     @extend .col-xs-12;
     @extend .col-sm-6;
     @extend .col-md-3;
     @extend .col-lg-4;
     @extend .last-md;
 
-    $logo-size: 30px;
-
-    display: block;
     padding-bottom: 30px;
-
-    li {
-      display: inline-block;
-      position: relative;
-
-      &:not(:last-of-type) {
-        margin-right: 12px;
-      }
-    }
-
-    a {
-      border: 2.5px solid;
-      border-radius: 50%;
-      color: $white;
-      display: inline-block;
-      font-size: 18px;
-      line-height: $logo-size;
-      text-align: center;
-      text-decoration: none;
-      width: $logo-size;
-    }
-
-    .linkedin a {
-      line-height: $logo-size - 2;
-      width: $logo-size - 2;
-    }
-
-    .facebook a {
-      font-size: 19px;
-    }
-
-    .twitter a {
-      font-size: 20px;
-    }
-
-    .title {
-      font-size: 10px;
-      left: 0;
-      position: absolute;
-      visibility: hidden;
-    }
   }
 
   @include breakpoint(sm) {
@@ -154,7 +110,7 @@ footer {
       }
     }
 
-    .social {
+    .social-links {
       padding-bottom: 0;
       text-align: right;
     }
