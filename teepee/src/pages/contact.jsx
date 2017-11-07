@@ -21,14 +21,14 @@ const Contact = function(props) {
               Phone
             </dt>
             <dd>
-              01353 611721
+              <a href="tel:01353611721">01353 611721</a>
             </dd>
 
             <dt>
               Mobile
             </dt>
             <dd>
-              07534323431
+              <a href="tel:07534323431">07534 323431</a>
             </dd>
 
             <dt>

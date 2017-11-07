@@ -6,48 +6,72 @@
     letter-spacing: -1.5px;
     line-height: 48px;
     margin: 0;
-    padding: 18px 10px 14px;
+    padding: 18px 0 14px;
     word-spacing: -2px;
   }
 
   .content {
     @extend .row;
 
-    background: url('../assets/images/home-matt-plummer.jpg') center no-repeat;
-    background-size: cover;
-    margin: 0 10px;
+    margin: 0;
   }
 
   .contact-types {
-    @extend .col-xs-3;
-    @extend .col-xs-offset-6;
+    @extend .col-xs-12;
+    @extend .col-sm-6;
+    @extend .col-md-4;
+    @extend .col-md-offset-4;
+    @extend .col-lg-3;
+    @extend .col-lg-offset-6;
 
+    background: url('../assets/images/home-matt-plummer.jpg') 33% center no-repeat;
+    background-size: cover;
+    margin-bottom: 10px;
+    padding-left: 33%;
     padding-top: 80px;
 
     dt {
-      font-size: 17px;
+      font-size: 16px;
       font-weight: $weight-light;
       letter-spacing: 0;
     }
 
     dd {
-      font-size: 17px;
+      font-size: 16px;
       letter-spacing: 0;
       margin-bottom: 24px;
+      word-spacing: -1px;
+
+      a {
+        text-decoration: none;
+      }
     }
 
     .privacy {
-      font-size: 12px;
+      font-size: 14px;
       font-weight: $weight-light;
       letter-spacing: 0;
-      margin: 40px 0 80px;
+      margin: 0 0 40px;
+    }
+
+    .social-links {
+      padding-top: 4px;
+
+      li {
+        margin-right: 5px;
+      }
     }
   }
 
   .contact-form {
-    @extend .col-xs-3;
+    @extend .col-xs-12;
+    @extend .col-sm-6;
+    @extend .col-md-4;
+    @extend .col-lg-3;
 
-    padding-top: 80px;
+    background: $very-dark-grey;
+    padding-bottom: 20px;
+    padding-top: 20px;
 
     p {
       display: none;
@@ -63,8 +87,46 @@
   }
 
   @include breakpoint(sm) {
+    h1 {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .content {
+      background: url('../assets/images/home-matt-plummer.jpg') 0 center no-repeat;
+      background-size: cover;
+      margin: 0 10px;
+    }
+
+    .contact-types {
+      background: none;
+      margin-bottom: 0;
+      padding-left: 10px;
+
+      dt,
+      dd {
+        font-size: 17px;
+      }
+
+      .privacy {
+        font-size: 12px;
+        margin: 40px 0 40px;
+      }
+    }
+
     .contact-form {
       background: none;
+      padding-top: 80px;
+    }
+  }
+
+  @include breakpoint(md) {
+    .content {
+      background-position: 70% center;
+    }
+
+    .contact-types .privacy {
+      margin-bottom: 80px;
     }
   }
 }
