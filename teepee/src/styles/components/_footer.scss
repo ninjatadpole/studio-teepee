@@ -48,22 +48,21 @@ footer {
       display: inline-block;
 
       &.icon-logo {
-        font-size: 30px;
+        font-size: 34px;
       }
 
       &.telephone,
       &.email {
         flex: 1;
         position: relative;
-        top: -3px;
       }
 
       &.telephone {
-        padding-right: 4px;
+        padding-right: 10px;
         text-align: right;
       }
       &.email {
-        padding-left: 4px;
+        padding-left: 6px;
         text-align: left;
       }
     }
