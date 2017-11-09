@@ -100,7 +100,18 @@ const Approach = function(props) {
             </p>
           </div>
           <div className="illustration">
-            <img src={ approachRender } alt="" />
+            <div className="with-caption">
+              <img src={ approachRender } alt="" />
+              <p className="caption-1">
+                Computer-generated views are created to
+                test space, views, and daylighting&hellip;
+              </p>
+              <p className="caption-2">
+                &hellip; and are continually
+                improved to reflect your
+                design preferences
+              </p>
+            </div>
           </div>
         </section>
 
@@ -124,8 +135,18 @@ const Approach = function(props) {
           </div>
 
           <div className="illustration">
-            <img src={ approachConstruction } alt="" />
-            <img src={ approachCompleted } alt="" />
+            <div className="with-caption">
+              <img src={ approachConstruction } alt="" />
+              <p className="caption-1">
+                During Construction&hellip;
+              </p>
+            </div>
+            <div className="with-caption">
+              <img src={ approachCompleted } alt="" />
+              <p className="caption-2">
+                &hellip; and Completed
+              </p>
+            </div>
           </div>
         </section>
 
