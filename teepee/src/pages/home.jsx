@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import HomeContact from '../components/home/contact';
 import HomeHero from '../components/home/hero';
