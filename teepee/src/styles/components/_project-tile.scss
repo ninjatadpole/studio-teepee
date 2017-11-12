@@ -1,0 +1,60 @@
+.project-tile {
+  @extend .col-xs-12;
+  @extend .col-sm-6;
+  @extend .col-md-4;
+
+  margin-bottom: 20px;
+  position: relative;
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 16px;
+    letter-spacing: -0.5px;
+    line-height: 20px;
+    margin-top: 8px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: $weight-light;
+    letter-spacing: -.5px;
+    line-height: 19px;
+    word-spacing: -1px;
+  }
+
+  &.contact {
+    .description {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      left: 0;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: 100%;
+    }
+
+    h3 {
+      margin: 0 12% 0;
+    }
+
+    p {
+      margin: 10% 20% 0;
+    }
+  }
+
+  @include breakpoint(sm) {
+    &.contact .description {
+      margin-top: -7%;
+    }
+  }
+}

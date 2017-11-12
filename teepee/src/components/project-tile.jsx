@@ -8,15 +8,16 @@ const ProjectTile = function(props) {
 
   const imgSrc = require(`../assets/images/project-${id}.jpg`);
 
+  const linkPath = `${id != 'contact' ? '/project' : ''}/${id}`;
+
   return (
-    <li
-      className={ classnames("project-tile", props.className) }
-      key={ `project-${id}` }
-    >
-      <Link to={ `/project/${id}` }>
+    <li className={ classnames("project-tile", props.className) }>
+      <Link to={ linkPath }>
         <img src={ imgSrc } alt="" />
-        <h3>{ type }</h3>
-        <p>{ location }</p>
+        <div className="description">
+          <h3>{ type }</h3>
+          <p>{ location }</p>
+        </div>
       </Link>
     </li>
   );

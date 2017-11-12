@@ -84,7 +84,7 @@ const ProjectList = function(props) {
           {
             projects.map((project) => {
               return (
-                <ProjectTile { ...project } />
+                <ProjectTile { ...project } key={ `project-${project.id}` } />
               );
             })
           }
@@ -95,7 +95,7 @@ const ProjectList = function(props) {
           {
             otherProjects.map((project) => {
               return (
-                <ProjectTile { ...project } />
+                <ProjectTile { ...project } key={ `project-${project.id}` } />
               );
             })
           }
