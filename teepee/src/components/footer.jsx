@@ -9,13 +9,13 @@ function Footer (props) {
         <ul className="membership">
           <li
             className="icon-logo-riba"
-            title="studio teepee is a member of the Royal Institune of British Architects"
+            title="Matt Plummer is a member of the Royal Institune of British Architects"
           >
             <span className="title">RIBA</span>
           </li>
           <li
             className="icon-logo-arb"
-            title="studio teepee is a member of the Architects Registration Board"
+            title="Matt Plummer is a member of the Architects Registration Board"
           >
             <span className="title">ARB</span>
           </li>

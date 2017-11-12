@@ -62,7 +62,7 @@ function ContactFormDisplay (props) {
       </fieldset>
       <p className="message">
         <span className="sending">Sending...</span>
-        <span className="sent">Thanks for your message. I'll contact you soon.</span>
+        <span className="sent">Thank you for your message.  I’ll be in touch soon</span>
         <span className="error">
           There was a problem with this form.<br />
           You can <a href={ `mailto:${mailAddress}?body=${mailBody}` }>click
@@ -70,7 +70,7 @@ function ContactFormDisplay (props) {
         </span>
       </p>
     </form>
-  )
+  );
 }
 
 ContactFormDisplay.propTypes = {

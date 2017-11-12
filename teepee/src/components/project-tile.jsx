@@ -8,7 +8,7 @@ const ProjectTile = function(props) {
 
   const imgSrc = require(`../assets/images/project-${id}.jpg`);
 
-  const linkPath = `${id != 'contact' ? '/project' : ''}/${id}`;
+  const linkPath = `${id !== 'contact' ? '/project' : ''}/${id}`;
 
   return (
     <li className={ classnames("project-tile", props.className) }>
