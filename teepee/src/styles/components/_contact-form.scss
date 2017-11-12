@@ -11,12 +11,13 @@
 
   .message {
     align-items: center;
-    background: transparentize($aqua, .2);
+    background: transparentize($dark-grey, .2);
     display: none;
     height: 100%;
     justify-content: center;
     left: 0;
     position: absolute;
+    text-align: center;
     top: 0;
     width: 100%;
   }
@@ -31,21 +32,21 @@
 
   .message {
     .sending {
-      color: transparentize($black, .2);
+      color: transparentize($white, .2);
       display: none;
       font-size: 19px;
       line-height: 28px;
     }
 
     .sent {
-      color: $black;
+      color: $white;
       display: none;
       font-size: 21px;
       line-height: 32px;
     }
 
     .error {
-      color: $black;
+      color: $white;
       display: none;
       font-size: 19px;
       line-height: 28px;

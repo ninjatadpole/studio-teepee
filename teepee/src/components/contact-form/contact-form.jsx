@@ -56,17 +56,16 @@ class ContactForm extends React.Component {
   }
 
   submitForm(formData) {
-    xhr({
+    xhr.post({
       data: formData,
       json: true,
-      method: 'POST',
       url: this.formAction,
     }, (err, resp, body) => {
-      if(err) {
+      if(err || resp.statusCode < 200 || resp.statusCode > 299) {
         this.setState({
           formError: formData,
           formSending: false,
-        })
+        });
       } else {
         this.setState({
           formSending: false,
