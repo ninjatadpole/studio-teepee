@@ -71,7 +71,7 @@
   a {
     color: $mid-grey;
     display: block;
-    padding: 6px 10px;
+    padding: 3px 10px;
     text-decoration: none;
     transition: color 200ms ease-in-out;
 
@@ -96,6 +96,10 @@
       &.open {
         max-height: ($menu-items * 35px) + ($mobile-menu-padding * 2);
       }
+    }
+
+    a {
+      padding: 6px 10px;
     }
   }
 

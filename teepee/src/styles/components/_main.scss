@@ -1,4 +1,8 @@
 main {
-  $padding: $header-height;
+  $padding: $header-height-xs;
   padding-top: $padding + 10px;
+
+  @include breakpoint(md) {
+    $padding: $header-height;
+  }
 }

@@ -1,7 +1,7 @@
 header {
   background-color: transparentize($dark-grey, .05);
   border-bottom: 1px solid transparentize($white, .3);
-  height: $header-height;
+  height: $header-height-xs;
   left: 0;
   position: fixed;
   right: 0;
@@ -10,7 +10,7 @@ header {
   .header-content {
     align-items: center;
     display: flex;
-    height: $header-height;
+    height: $header-height-xs;
     justify-content: flex-end;
   }
 
@@ -18,14 +18,12 @@ header {
     @extend .col-xs-8;
     @extend .col-md-6;
 
-    $font-size: 22px;
-
     color: $white;
-    font-size: $font-size;
+    font-size: 22px;
     font-weight: $weight-light;
-    height: $nav-height;
+    height: $nav-height-xs;
     left: 0;
-    line-height: $nav-height;
+    line-height: $nav-height-xs;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -37,9 +35,10 @@ header {
 
     .icon-logo {
       float: left;
-      font-size: 44px;
-      line-height: $nav-height;
+      font-size: $nav-height-xs - 4px;
+      line-height: $nav-height-xs;
       position: absolute;
+      top: -2px;
     }
 
     .company {
@@ -49,17 +48,19 @@ header {
 
     .company {
       display: block;
-      padding-left: 64px;
+      padding-left: 52px;
     }
+  }
 
-    @include breakpoint(sm) {
+  @include breakpoint(sm) {
+    .brand {
       align-items: center;
       display: flex;
-      font-size: 32px;
-      line-height: $nav-height;
+      font-size: 27px;
+      line-height: $nav-height-xs;
 
       .icon-logo {
-        font-size: $nav-height;
+        font-size: $nav-height-xs;
         position: relative;
       }
 
@@ -69,13 +70,29 @@ header {
         padding-top: 0;
       }
     }
+  }
 
-    @include breakpoint(md) {
+  @include breakpoint(md) {
+    height: $header-height;
+
+    .header-content {
+      height: $header-height;
+    }
+
+    .brand {
+      font-size: 32px;
+      height: $nav-height;
       left: 0;
+      line-height: $nav-height;
       padding-right: 0;
       position: relative;
       top: auto;
       transform: translateY(0);
+
+      .icon-logo {
+        font-size: $nav-height;
+        line-height: $nav-height;
+      }
     }
   }
 }
