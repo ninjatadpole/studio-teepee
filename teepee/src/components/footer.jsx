@@ -3,6 +3,16 @@ import React from 'react';
 import SocialLinks from './social-links';
 
 function Footer (props) {
+  const trackClick = (e) => {
+    if (window.ga) {
+      window.ga('send', 'event', {
+        eventCategory: 'contact',
+        eventAction: 'clicked',
+        eventLabel: `footer ${e.target.parentElement.className}`
+      });
+    }
+  }
+
   return (
     <footer className="wrapper">
       <div className="row">
@@ -23,11 +33,17 @@ function Footer (props) {
 
         <ul className="contact">
           <li className="telephone">
-            t: <a href="tel:01353 611 721">01353 611 721</a>
+            t: <a
+              href="tel:01353 611 721"
+              onClick={ trackClick }
+              >01353 611 721</a>
           </li>
           <li className="icon-logo" />
           <li className="email">
-            <a href="mailto:hello@studioteepee.co.uk">hello@studioteepee.co.uk</a>
+            <a
+              href="mailto:hello@studioteepee.co.uk"
+              onClick={ trackClick }
+            >hello@studioteepee.co.uk</a>
           </li>
         </ul>
 

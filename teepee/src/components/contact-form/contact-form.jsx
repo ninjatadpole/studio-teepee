@@ -66,11 +66,27 @@ class ContactForm extends React.Component {
           formError: formData,
           formSending: false,
         });
+
+        if (window.ga) {
+          window.ga('send', 'event', {
+            eventCategory: 'contact form',
+            eventAction: 'failed',
+            eventLabel: JSON.stringify(formData)
+          });
+        }
       } else {
         this.setState({
           formSending: false,
           formSent: true,
         });
+
+        if (window.ga) {
+          window.ga('send', 'event', {
+            eventCategory: 'contact form',
+            eventAction: 'sent',
+            eventLabel: JSON.stringify(formData)
+          });
+        }
       }
     });
   }

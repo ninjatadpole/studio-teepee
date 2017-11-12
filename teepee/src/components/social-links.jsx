@@ -10,6 +10,19 @@ function SocialLinks (props) {
     e.preventDefault();
     window.open(href, title);
 
+    if (window.ga) {
+      window.ga('send', 'event', {
+        eventCategory: 'social link',
+        eventAction: 'clicked',
+        eventLabel: `${props.location} ${title}`
+      });
+
+      window.ga('send', 'social', {
+        'socialNetwork': title,
+        'socialAction': 'visit',
+        'socialTarget': href
+      });
+    }
   }
 
   return (
