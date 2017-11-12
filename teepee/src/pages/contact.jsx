@@ -43,7 +43,7 @@ const Contact = function(props) {
               Follow me
             </dt>
             <dd>
-              <SocialLinks />
+              <SocialLinks location="contact" />
             </dd>
           </dl>
 

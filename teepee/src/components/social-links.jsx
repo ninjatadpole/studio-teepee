@@ -1,10 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function SocialLinks (props) {
   const openInNewTab = (e) => {
     const link = e.target;
+    const href = link.getAttribute('href');
+    const title = link.parentElement.className;
+
     e.preventDefault();
-    window.open(link.getAttribute('href'), link.getAttribute('title'));
+    window.open(href, title);
+
   }
 
   return (
@@ -38,6 +43,10 @@ function SocialLinks (props) {
       </li>
     </ul>
   );
+}
+
+SocialLinks.propTypes = {
+  location: PropTypes.string.isRequired,
 }
 
 export default SocialLinks

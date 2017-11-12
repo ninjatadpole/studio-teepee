@@ -31,7 +31,7 @@ function Footer (props) {
           </li>
         </ul>
 
-        <SocialLinks />
+        <SocialLinks location="footer" />
       </div>
     </footer>
   )
