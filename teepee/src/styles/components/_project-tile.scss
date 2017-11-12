@@ -44,17 +44,29 @@
     }
 
     h3 {
+      font-size: 18px;
+      line-height: 22px;
       margin: 0 12% 0;
     }
 
     p {
+      font-size: 18px;
+      line-height: 22px;
       margin: 10% 20% 0;
     }
   }
 
   @include breakpoint(sm) {
-    &.contact .description {
-      margin-top: -7%;
+    &.contact {
+      .description {
+        margin-top: -7%;
+      }
+
+      h3,
+      p {
+        font-size: 16px;
+        line-height: 20px;
+      }
     }
   }
 }
