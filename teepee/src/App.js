@@ -23,15 +23,24 @@ const Contents = (props) => {
       <Header />
 
       <Switch>
-        <Route exact path="/" component={ HomePage }/>
-        <Route path="/projects" component={ ProjectListPage }/>
-        <Route path="/approach" component={ ApproachPage }/>
-        <Route path="/contact" component={ ContactPage }/>
-        <Route component={ HomePage }/>
+        <TrackedRoute exact path="/" component={ HomePage }/>
+        <TrackedRoute path="/projects" component={ ProjectListPage }/>
+        <TrackedRoute path="/approach" component={ ApproachPage }/>
+        <TrackedRoute path="/contact" component={ ContactPage }/>
+        <TrackedRoute component={ HomePage }/>
       </Switch>
 
       <Footer />
     </div>
+  );
+}
+
+const TrackedRoute = (props) => {
+  console.log(props)
+  window.ga('send', 'pageview', props.location.pathname);
+
+  return (
+    <Route { ...props } />
   );
 }
 
