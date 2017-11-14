@@ -5,6 +5,7 @@ import HomePage from './pages/home';
 import ApproachPage from './pages/approach';
 import ContactPage from './pages/contact';
 import ProjectListPage from './pages/project-list';
+import ProjectDetailsPage from './pages/project-details';
 
 import Footer from './components/footer';
 import Header from './components/header';
@@ -24,7 +25,8 @@ const Contents = (props) => {
 
       <Switch>
         <TrackedRoute exact path="/" component={ HomePage }/>
-        <TrackedRoute path="/projects" component={ ProjectListPage }/>
+        <TrackedRoute exact path="/projects" component={ ProjectListPage }/>
+        <TrackedRoute path="/projects/:projectId" component={ ProjectDetailsPage }/>
         <TrackedRoute path="/approach" component={ ApproachPage }/>
         <TrackedRoute path="/contact" component={ ContactPage }/>
         <TrackedRoute component={ HomePage }/>
