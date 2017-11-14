@@ -1,0 +1,44 @@
+
+[
+  {
+    "id": "willow-walk-extension",
+    "type": "Contemporary Extension",
+    "location": "Willow Walk, Ely"
+  },
+  {
+    "id": "crescent-extension",
+    "type": "Contemporary Extension",
+    "location": "The Crescent, Norwich"
+  },
+  {
+    "id": "sussex-street-mixed",
+    "type": "Mixed Use Development",
+    "location": "Sussex Street, Norwich"
+  },
+  {
+    "id": "willow-walk-remodelling",
+    "type": "Home Remodelling",
+    "location": "Willow Walk, Ely"
+  },
+  {
+    "id": "hall-farm-venue",
+    "type": "Rural Wedding Venue",
+    "location": "Hall Farm, Stanningfield"
+  },
+  {
+    "className": "contact",
+    "id": "contact",
+    "type": "Thinking about your own project?",
+    "location": "Get in touch to arrange a free consultation"
+  },
+  {
+    "id": "dukes-park-renovation",
+    "type": "Extensive Renovation and Extension",
+    "location": "Duke’s Park, Woodbridge"
+  },
+  {
+    "id": "hall-farm-conversion",
+    "type": "Barn Conversion",
+    "location": "Hall Farm, Stanningfield"
+  }
+]
