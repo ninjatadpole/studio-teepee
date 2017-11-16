@@ -6,7 +6,7 @@ import classnames from 'classnames';
 const ProjectTile = function(props) {
   const { id, location, type } = props;
 
-  const imgSrc = require(`../assets/images/project-${id}.jpg`);
+  const imgSrc = require(`../assets/images/projects/${id}/thumb.jpg`);
 
   const linkPath = `${id === 'contact' ? '': '/projects'}/${id}`;
 

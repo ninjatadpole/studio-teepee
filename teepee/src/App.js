@@ -38,7 +38,6 @@ const Contents = (props) => {
 }
 
 const TrackedRoute = (props) => {
-  console.log(props)
   window.ga('send', 'pageview', props.location.pathname);
 
   return (
