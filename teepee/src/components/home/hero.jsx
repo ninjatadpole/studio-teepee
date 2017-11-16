@@ -35,22 +35,12 @@ function HomeHero (props) {
 
   const hero = heroes[ version ];
 
-  let heroImage;
-  const imgPath = `../../assets/images/home-hero-${version}.jpg`;
-  try {
-    heroImage = require(imgPath);
-  } catch(e) {
-    // we have no hero image
-    console.error('found no image when looking for', imgPath);
-  }
+  const heroImage = require(`../../assets/images/home-hero-${version}.jpg`);
 
   return (
     <section className={`home-hero home-hero-${version}`}>
       <figure>
-        {
-          heroImage &&
-          <img src={ heroImage } alt="" />
-        }
+        <img src={ heroImage } alt="" />
         { hero.caption }
       </figure>
     </section>
