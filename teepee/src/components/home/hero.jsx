@@ -1,16 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import heroImage1 from '../../assets/images/home-hero-1.jpg';
-import heroImage2 from '../../assets/images/home-hero-2.jpg';
-
 function HomeHero (props) {
   const { version } = props;
 
   const heroes = [
     {},
     {
-      image: heroImage1,
       caption: (
         <figcaption>
           <q>
@@ -24,7 +20,6 @@ function HomeHero (props) {
       )
     },
     {
-      image: heroImage2,
       caption: (
         <figcaption>
           <q>
@@ -40,10 +35,22 @@ function HomeHero (props) {
 
   const hero = heroes[ version ];
 
+  let heroImage;
+  const imgPath = `../../assets/images/home-hero-${version}.jpg`;
+  try {
+    heroImage = require(imgPath);
+  } catch(e) {
+    // we have no hero image
+    console.error('found no image when looking for', imgPath);
+  }
+
   return (
     <section className={`home-hero home-hero-${version}`}>
       <figure>
-        <img src={ hero.image } alt="" />
+        {
+          heroImage &&
+          <img src={ heroImage } alt="" />
+        }
         { hero.caption }
       </figure>
     </section>
