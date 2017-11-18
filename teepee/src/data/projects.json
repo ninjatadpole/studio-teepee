@@ -8,7 +8,12 @@
   {
     "id": "crescent-extension",
     "type": "Contemporary Extension",
-    "location": "The Crescent, Norwich"
+    "location": "The Crescent, Norwich",
+    "images": [
+      "photo-1.jpg",
+      "photo-2.jpg",
+      "photo-3.jpg"
+    ]
   },
   {
     "id": "sussex-street-mixed",
