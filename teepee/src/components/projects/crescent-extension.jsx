@@ -23,9 +23,11 @@ const ProjectDescription = function(props) {
         to become softened and warm. Thermal performances for the floor, walls and roof
         are also significantly enhanced.
       </p>
-      <p className="ps">
+      <p>
         The scheme was given a Commendation in the Spirit of Ingenuity awards, RIBA
-        East.<br />
+        East.
+      </p>
+      <p className="ps">
         The project was completed while Matt was with CSA Design Studio in Norfolk.
         Images courtesy of CSA Design Studio
       </p>

@@ -1,0 +1,74 @@
+.page-project-details {
+  @extend .wrapper;
+
+  h1 {
+    @extend .row;
+
+    font-size: 36px;
+    letter-spacing: -1.5px;
+    line-height: 45px;
+    margin: 0 10px;
+    padding-top: 16px;
+    padding-bottom: 2px;
+    word-spacing: -2px;
+  }
+
+  h2 {
+    @extend .row;
+
+    font-size: 36px;
+    font-weight: $weight-light;
+    letter-spacing: -1px;
+    line-height: 45px;
+    margin: 0 10px 10px;
+    word-spacing: -1px;
+  }
+
+  .content {
+    @extend .row;
+
+    margin: 0;
+  }
+
+  .hero {
+    @extend .col-xs-12;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .description {
+    @extend .col-xs-12;
+    @extend .col-sm-6;
+    @extend .col-md-5;
+    @extend .col-lg-4;
+
+    font-size: 16px;
+    font-weight: $weight-light;
+    letter-spacing: -.5px;
+    line-height: 19px;
+
+    p {
+      margin-bottom: 21px;
+
+      &.ps {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .images {
+    @extend .col-xs-12;
+    @extend .col-sm-6;
+    @extend .col-md-offset-1;
+    @extend .col-lg-offset-2;
+
+    img {
+      display: block;
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}
