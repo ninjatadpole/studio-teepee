@@ -71,4 +71,20 @@
       margin-bottom: 10px;
     }
   }
+
+  @include breakpoint(sm) {
+    .description {
+      padding-right: 20px;
+    }
+
+    .images {
+      padding-left: 0;
+    }
+  }
+
+  @include breakpoint(md) {
+    .description {
+      padding-right: 10px;
+    }
+  }
 }

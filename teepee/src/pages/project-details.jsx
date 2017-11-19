@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router';
 
 import projects from '../data/projects.json';
 import projectsOther from '../data/projects-other.json';
@@ -12,7 +13,7 @@ const ProjectDetails = function(props) {
     return aggregate;
   }, null);
 
-  if (projectMatch) {
+  if (projectMatch && projectMatch.images) {
     const heroImg = require(`../assets/images/projects/${projectId}/hero.jpg`);
     const Description = require(`../components/projects/${projectId}`).default;
 
@@ -51,7 +52,9 @@ const ProjectDetails = function(props) {
     );
 
   } else {
-    return null;
+    return (
+      <Redirect to="/projects" />
+    );
   }
 }
 
