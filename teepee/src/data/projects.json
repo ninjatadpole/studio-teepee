@@ -3,12 +3,20 @@
   {
     "id": "willow-walk-extension",
     "type": "Contemporary Extension",
-    "location": "Willow Walk, Ely"
+    "location": "Willow Walk, Ely",
+    "hero": false,
+    "images": [
+      "photo-1.jpg",
+      "photo-2.jpg",
+      "photo-3.jpg",
+      "photo-4.jpg"
+    ]
   },
   {
     "id": "crescent-extension",
     "type": "Contemporary Extension",
     "location": "The Crescent, Norwich",
+    "hero": true,
     "images": [
       "photo-1.jpg",
       "photo-2.jpg",

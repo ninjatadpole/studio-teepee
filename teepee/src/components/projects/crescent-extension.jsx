@@ -13,7 +13,7 @@ const ProjectDescription = function(props) {
       <p>
         The sliding glass uses the narrowest framing system available at the time, yet
         achieves a 2.6x2.8m sliding glass unit, with a returning panel which slides
-        into a concealed pocket. In summer, the room has a 'pavilion' character opening
+        into a concealed pocket. In summer, the room has a ‘spa quality’ character opening
         onto the garden, and with a large roof light installed at the junction with the
         main house, natural light floods the new kitchen.
       </p>

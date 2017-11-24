@@ -14,7 +14,7 @@ const ProjectDetails = function(props) {
   }, null);
 
   if (projectMatch && projectMatch.images) {
-    const heroImg = require(`../assets/images/projects/${projectId}/hero.jpg`);
+    const heroImg = projectMatch.hero ? require(`../assets/images/projects/${projectId}/hero.jpg`) : false;
     const Description = require(`../components/projects/${projectId}`).default;
 
     return (
