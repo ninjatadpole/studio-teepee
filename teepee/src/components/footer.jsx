@@ -49,6 +49,9 @@ function Footer (props) {
 
         <SocialLinks location="footer" />
       </div>
+      <div className="row">
+        <p className="copyright">Copyright Studio TeePee &copy;{ new Date().getFullYear() }</p>
+      </div>
     </footer>
   )
 }
