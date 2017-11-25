@@ -24,6 +24,10 @@
     word-spacing: -1px;
   }
 
+  img {
+    display: block;
+  }
+
   .content {
     @extend .row;
 
@@ -34,6 +38,7 @@
     @extend .col-xs-12;
 
     img {
+      margin-bottom: 10px;
       max-width: 100%;
     }
   }
@@ -66,7 +71,6 @@
     @extend .col-lg-offset-2;
 
     img {
-      display: block;
       max-width: 100%;
       margin-bottom: 10px;
     }

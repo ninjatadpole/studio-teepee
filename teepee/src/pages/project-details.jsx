@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router';
+import classnames from 'classnames';
 
 import projects from '../data/projects.json';
 import projectsOther from '../data/projects-other.json';
@@ -14,7 +15,16 @@ const ProjectDetails = function(props) {
   }, null);
 
   if (projectMatch && projectMatch.images) {
-    const heroImg = projectMatch.hero ? require(`../assets/images/projects/${projectId}/hero.jpg`) : false;
+    let heroImg;
+    let sideImgHero = false;
+    if (projectMatch.hero) {
+      heroImg = require(`../assets/images/projects/${projectId}/hero.jpg`);
+    } else {
+      const firstImage = projectMatch.images[0];
+      heroImg = require(`../assets/images/projects/${projectId}/${firstImage}`);
+      sideImgHero = true;
+    };
+
     const Description = require(`../components/projects/${projectId}`).default;
 
     return (
@@ -25,7 +35,9 @@ const ProjectDetails = function(props) {
         <div className="content">
           {
             heroImg &&
-            <div className="hero">
+            <div className={ classnames("hero", {
+              'show-for-xs hide-for-sm': sideImgHero
+            }) }>
               <img src={ heroImg } alt="" />
             </div>
           }
@@ -34,17 +46,25 @@ const ProjectDetails = function(props) {
           </div>
           {
             projectMatch.images &&
-            <div className="images">
+            <ul className="images">
               {
                 projectMatch.images.reduce((aggregate, image, index) => {
                   const imgSrc = require(`../assets/images/projects/${projectId}/${image}`);
                   return [
                     ...aggregate,
-                    <img src={ imgSrc } alt="" key={ `image-${index}` } />
+                    <li
+                      className={ classnames({
+                        'hide-for-xs show-for-sm': index === 0 && sideImgHero
+                      }) }>
+                      <img
+                        src={ imgSrc }
+                        alt=""
+                        key={ `image-${index}` } />
+                    </li>
                   ];
                 }, [])
               }
-            </div>
+            </ul>
           }
 
         </div>
