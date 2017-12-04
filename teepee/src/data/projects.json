@@ -46,9 +46,15 @@
     ]
   },
   {
-    "id": "hall-farm-venue",
+    "id": "hall-farm-wedding-venue",
     "type": "Rural Wedding Venue",
-    "location": "Hall Farm, Stanningfield"
+    "location": "Hall Farm, Stanningfield",
+    "hero": true,
+    "images": [
+      "photo-1.jpg",
+      "photo-2.jpg",
+      "photo-3.jpg"
+    ]
   },
   {
     "className": "contact",
