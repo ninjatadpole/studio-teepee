@@ -33,9 +33,6 @@ const ProjectDescription = function(props) {
         make our home special and this is due to the efforts of Matt.”<br /><br />
         Jan and Paul
       </p>
-      <p>
-
-      </p>
     </div>
   );
 }
