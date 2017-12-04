@@ -31,7 +31,13 @@
   {
     "id": "willow-walk-remodelling",
     "type": "Home Remodelling",
-    "location": "Willow Walk, Ely"
+    "location": "Willow Walk, Ely",
+    "hero": true,
+    "images": [
+      "photo-1.jpg",
+      "photo-2.jpg",
+      "photo-3.jpg"
+    ]
   },
   {
     "id": "hall-farm-venue",
