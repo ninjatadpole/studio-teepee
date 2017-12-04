@@ -13,8 +13,9 @@ const ProjectDetails = function(props) {
     }
     return aggregate;
   }, null);
+  const hasImages = (projectMatch.images || projectMatch.hero);
 
-  if (projectMatch && projectMatch.images) {
+  if (projectMatch && hasImages) {
     let heroImg;
     let sideImgHero = false;
     if (projectMatch.hero) {
