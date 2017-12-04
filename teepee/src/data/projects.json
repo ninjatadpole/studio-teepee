@@ -24,9 +24,15 @@
     ]
   },
   {
-    "id": "sussex-street-mixed",
-    "type": "Mixed Use Development",
-    "location": "Sussex Street, Norwich"
+    "id": "sussex-street-mixed-use",
+    "type": "Residential Development",
+    "location": "Sussex Street, Norwich",
+    "hero": true,
+    "images": [
+      "photo-1.jpg",
+      "photo-2.jpg",
+      "photo-3.jpg"
+    ]
   },
   {
     "id": "willow-walk-remodelling",
