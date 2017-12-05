@@ -46,9 +46,9 @@
     ]
   },
   {
-    "id": "hall-farm-wedding-venue",
-    "type": "Rural Wedding Venue",
-    "location": "Hall Farm, Stanningfield",
+    "id": "hall-farm-threshing-barn",
+    "type": "Hall Farm Threshing Barn",
+    "location": "Stanningfield, Suffolk",
     "hero": true,
     "images": [
       "photo-1.jpg",
