@@ -39,7 +39,9 @@ const ProjectDetails = function(props) {
             <div className={ classnames("hero", {
               'show-for-xs hide-for-sm': sideImgHero
             }) }>
-              <img src={ heroImg } alt="" />
+              <span>
+                <img src={ heroImg } alt="" />
+              </span>
             </div>
           }
           <div className="description">

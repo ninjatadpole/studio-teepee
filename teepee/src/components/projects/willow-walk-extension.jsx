@@ -25,8 +25,7 @@ const ProjectDescription = function(props) {
         expected light levels.
       </p>
       <p>
-        The property is in within Ely’s Conservation Area, adjacent to the
-        sought after Waterside area of Ely.
+        The property is within the Ely Conservation Area
       </p>
     </div>
   );
