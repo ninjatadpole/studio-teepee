@@ -27,6 +27,13 @@
   {
     "id": "alabama-rural-studio",
     "type": "Rural Studio Research Trip",
-    "location": "Alabama, US"
+    "location": "Alabama, US",
+    "hero": true,
+    "images": [
+      "photo-1.jpg",
+      "photo-2.jpg",
+      "photo-3.jpg",
+      "photo-4.jpg"
+    ]
   }
 ]
