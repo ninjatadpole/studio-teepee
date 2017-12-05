@@ -20,9 +20,10 @@
     ]
   },
   {
-    "id": "river-wensum-incubator",
+    "id": "new-mills-incubator",
     "type": "New Mills Incubator",
-    "location": "River Wensum, Norwich"
+    "location": "River Wensum, Norwich",
+    "hero": true
   },
   {
     "id": "alabama-rural-studio",
