@@ -13,7 +13,11 @@
   {
     "id": "long-road-student-centre",
     "type": "Student Centre",
-    "location": "Long Road Sixth Form College, Cambridge"
+    "location": "Long Road Sixth Form College, Cambridge",
+    "hero": true,
+    "images": [
+      "photo-1.jpg"
+    ]
   },
   {
     "id": "river-wensum-incubator",
