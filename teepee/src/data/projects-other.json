@@ -2,7 +2,13 @@
   {
     "id": "cambridge-student-accommodation",
     "type": "Student Accommodation",
-    "location": "North West Cambridge"
+    "location": "Swirles Court, North West Cambridge",
+    "hero": true,
+    "images": [
+      "photo-1.jpg",
+      "photo-2.jpg",
+      "photo-3.jpg"
+    ]
   },
   {
     "id": "long-road-student-centre",
