@@ -15,8 +15,8 @@ const ProjectTile = function(props) {
       <Link to={ linkPath }>
         <img src={ imgSrc } alt="" />
         <div className="description">
-          <h3>{ type }</h3>
-          <p>{ location }</p>
+          <h3>{ location }</h3>
+          <p>{ type }</p>
         </div>
       </Link>
     </li>

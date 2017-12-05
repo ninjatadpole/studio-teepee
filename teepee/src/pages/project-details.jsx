@@ -30,8 +30,8 @@ const ProjectDetails = function(props) {
 
     return (
       <main className="page-project-details">
-        <h1>{ projectMatch.type }</h1>
-        <h2>{ projectMatch.location }</h2>
+        <h1>{ projectMatch.location }</h1>
+        <h2>{ projectMatch.type }</h2>
 
         <div className="content">
           {
