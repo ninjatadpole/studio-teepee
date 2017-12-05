@@ -65,7 +65,11 @@
   {
     "id": "dukes-park-renovation",
     "type": "Extensive Renovation and Extension",
-    "location": "Duke’s Park, Woodbridge"
+    "location": "Duke’s Park, Woodbridge",
+    "hero": true,
+    "images": [
+      "photo-1.jpg"
+    ]
   },
   {
     "id": "hall-farm-holiday-lets",
