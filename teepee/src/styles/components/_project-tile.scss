@@ -15,6 +15,14 @@
     width: 100%;
   }
 
+  figure.loading {
+    padding-bottom: 66%;
+
+    img {
+      display: none;
+    }
+  }
+
   h3 {
     font-size: 16px;
     letter-spacing: -0.5px;
