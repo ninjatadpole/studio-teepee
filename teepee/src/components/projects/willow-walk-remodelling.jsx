@@ -23,6 +23,7 @@ const ProjectDescription = function(props) {
         displayed with quiet support from the white-washed architecture.
       </p>
       <p>
+        <blockquote>
         “Matt was our guiding figure for the complete refurbishment. He took
         time and was patient and dedicated and kept us informed, listened to our
         opinions, and gave a complete and personal service.<br /><br />
@@ -31,7 +32,8 @@ const ProjectDescription = function(props) {
         We have no hesitation in recommending him. All our family and friends
         who have visited are awestruck at the changes that have taken place to
         make our home special and this is due to the efforts of Matt.”<br /><br />
-        Jan and Paul
+        </blockquote>
+        <cite>Jan and Paul</cite>
       </p>
     </div>
   );
