@@ -2,6 +2,8 @@ import React from 'react';
 import { Redirect } from 'react-router';
 import classnames from 'classnames';
 
+import ImageLoader from '../components/image-loader';
+
 import projects from '../data/projects.json';
 import projectsOther from '../data/projects-other.json';
 
@@ -40,7 +42,7 @@ const ProjectDetails = function(props) {
               'show-for-xs hide-for-sm': sideImgHero
             }) }>
               <span>
-                <img src={ heroImg } alt="" />
+                <ImageLoader src={ heroImg } alt="" />
               </span>
             </div>
           }
@@ -58,11 +60,10 @@ const ProjectDetails = function(props) {
                     <li
                       className={ classnames({
                         'hide-for-xs show-for-sm': index === 0 && sideImgHero
-                      }) }>
-                      <img
-                        src={ imgSrc }
-                        alt=""
-                        key={ `image-${index}` } />
+                      }) }
+                      key={ `image-${index}` }
+                    >
+                      <ImageLoader src={ imgSrc } alt="" />
                     </li>
                   ];
                 }, [])
