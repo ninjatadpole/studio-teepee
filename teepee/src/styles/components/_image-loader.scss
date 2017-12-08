@@ -1,0 +1,27 @@
+.image-loader {
+  padding-bottom: 10%;
+
+  img {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 350ms ease-in-out;
+  }
+
+  &.loading {
+    transition: padding-bottom 500ms ease-in-out;
+  }
+
+  &.mounted {
+    padding-bottom: 60%;
+  }
+
+  &.loaded {
+    padding-bottom: 0;
+
+    img {
+      opacity: 1;
+      position: relative;
+    }
+  }
+}
