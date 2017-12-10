@@ -1,13 +1,47 @@
 .page-project-details {
   @extend .wrapper;
 
-  h1 {
+  .title {
     @extend .row;
+
+    margin: 0;
+  }
+
+  .fin {
+    @extend .row;
+
+    margin: 0;
+  }
+
+
+  .back-button {
+    @extend .col-xs-12;
+    @extend .first-xs;
+    @extend .reset-sm;
+    @extend .col-sm-3;
+
+    font-size: 20px;
+    font-weight: $weight-light;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    text-decoration: none;
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+
+  h1 {
+    @extend .col-xs-12;
+    @extend .col-sm-9;
+    @extend .first-sm;
 
     font-size: 36px;
     letter-spacing: -1.5px;
     line-height: 45px;
-    margin: 0 10px;
+    margin: 0;
     padding-top: 16px;
     padding-bottom: 2px;
     word-spacing: -2px;
@@ -85,7 +119,22 @@
     }
   }
 
+  .fin .back-button {
+    @extend .col-sm-4;
+    @extend .col-sm-offset-8;
+
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
   @include breakpoint(sm) {
+    .back-button {
+      align-self: center;
+      font-size: 18px;
+      padding-left: 0;
+      text-align: right;
+    }
+
     .description {
       padding-right: 20px;
     }
@@ -96,6 +145,10 @@
   }
 
   @include breakpoint(md) {
+    .back-button {
+      font-size: 20px;
+    }
+
     .description {
       padding-right: 10px;
     }

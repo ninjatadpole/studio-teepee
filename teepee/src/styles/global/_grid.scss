@@ -20,7 +20,7 @@ $flexbox-breakpoints: [];
 }
 
 $breakpoints: $flexbox-breakpoints;
-@import 'flexboxgrid-sass/flexboxgrid';
+@import 'flexboxgrid-sass/flexboxgrid.scss';
 
 // sass-breakpoints settings
 $breakpoints: $breakpoint-list;
@@ -47,5 +47,9 @@ $breakpoints: $breakpoint-list;
     .col-#{$key}-offset-0 {
       margin-left: 0;
     }
+  }
+
+  .reset-#{$key} {
+    order: 0;
   }
 }

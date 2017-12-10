@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router';
 import classnames from 'classnames';
 
@@ -32,8 +33,12 @@ const ProjectDetails = function(props) {
 
     return (
       <main className="page-project-details">
-        <h1>{ projectMatch.location }</h1>
-        <h2>{ projectMatch.type }</h2>
+        <div className="title">
+          <ProjectBackButton />
+
+          <h1>{ projectMatch.location }</h1>
+          <h2>{ projectMatch.type }</h2>
+        </div>
 
         <div className="content">
           {
@@ -72,6 +77,11 @@ const ProjectDetails = function(props) {
           }
 
         </div>
+
+        <div className="fin">
+          <ProjectBackButton />
+        </div>
+
       </main>
     );
 
@@ -80,6 +90,12 @@ const ProjectDetails = function(props) {
       <Redirect to="/projects" />
     );
   }
+}
+
+const ProjectBackButton = (props) => {
+  return (
+    <Link className="back-button" to="/projects">&lt; Back to Projects</Link>
+  );
 }
 
 export default ProjectDetails;
