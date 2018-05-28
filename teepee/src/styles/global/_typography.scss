@@ -22,6 +22,11 @@ a {
   color: inherit;
 }
 
+b,
+strong {
+  font-weight: $weight-bold;
+}
+
 @font-face {
   font-family: "teepee-icons";
   src: url("../assets/fonts/teepee-icons.woff") format("woff");

@@ -65,11 +65,6 @@ const Contact = function(props) {
               <SocialLinks location="contact" />
             </dd>
           </dl>
-
-          <p className="privacy">
-            I respect your privacy.
-            Your details will never be shared with anyone else, ever.
-          </p>
         </div>
 
         <ContactForm page="contact page" />

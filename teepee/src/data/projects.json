@@ -60,7 +60,7 @@
     "className": "contact",
     "id": "contact",
     "type": "Thinking about your own project?",
-    "location": "Get in touch to arrange a free consultation"
+    "location": "Get in touch <b>here</b> to arrange a free consultation"
   },
   {
     "id": "dukes-park-renovation",

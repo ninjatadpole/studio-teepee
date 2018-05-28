@@ -16,8 +16,8 @@ const ProjectTile = (props) => {
         <ImageLoader src={ imgSrc } alt="" />
 
         <div className="description">
-          <h3>{ location }</h3>
-          <p>{ type }</p>
+          <h3 dangerouslySetInnerHTML={{ __html: location }}></h3>
+          <p dangerouslySetInnerHTML={{ __html: type }} />
         </div>
       </Link>
     </li>
