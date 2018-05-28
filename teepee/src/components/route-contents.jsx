@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import HomePage from '../pages/home';
 import ApproachPage from '../pages/approach';
 import ContactPage from '../pages/contact';
+import PrivacyPage from '../pages/privacy';
 import ProjectListPage from '../pages/project-list';
 import ProjectDetailsPage from '../pages/project-details';
 
@@ -21,6 +22,7 @@ const RouteContents = (props) => {
         <TrackedRoute path="/projects/:projectId" component={ ProjectDetailsPage }/>
         <TrackedRoute path="/approach" component={ ApproachPage }/>
         <TrackedRoute path="/contact" component={ ContactPage }/>
+        <TrackedRoute path="/privacy" component={ PrivacyPage }/>
         <TrackedRoute component={ HomePage }/>
       </Switch>
 

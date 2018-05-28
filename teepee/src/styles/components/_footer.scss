@@ -83,11 +83,26 @@ footer {
     padding-bottom: 30px;
   }
 
-  .copyright {
+  .copyright,
+  .privacy {
+    @extend .col-xs-6;
+
     font-size: 12px;
     font-weight: $weight-light;
     letter-spacing: 0;
     padding-top: 24px;
+  }
+
+  .copyright {
+    text-align: right;
+  }
+
+  .privacy {
+    text-align: left;
+
+    a {
+      text-decoration: none;
+    }
   }
 
   @include breakpoint(sm) {

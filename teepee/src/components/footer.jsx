@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import SocialLinks from './social-links';
 
@@ -51,6 +52,10 @@ function Footer (props) {
       </div>
       <div className="row">
         <p className="copyright">Copyright Studio TeePee &copy;{ new Date().getFullYear() }</p>
+
+        <p className="privacy">
+          <Link to="/privacy">Privacy Policy</Link>
+        </p>
       </div>
     </footer>
   )

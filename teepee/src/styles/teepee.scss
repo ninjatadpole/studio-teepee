@@ -8,6 +8,13 @@
 
 @import "global/page";
 
+@import "pages/approach";
+@import "pages/contact";
+@import "pages/home";
+@import "pages/privacy";
+@import "pages/project-details";
+@import "pages/project-list";
+
 @import "components/contact-form";
 @import "components/footer";
 @import "components/header";
@@ -20,9 +27,3 @@
 @import "components/navigation";
 @import "components/project-tile";
 @import "components/social-links";
-
-@import "pages/approach";
-@import "pages/contact";
-@import "pages/home";
-@import "pages/project-details";
-@import "pages/project-list";
