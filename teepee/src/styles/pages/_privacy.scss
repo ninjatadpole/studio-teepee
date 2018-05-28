@@ -1,0 +1,85 @@
+.page-privacy {
+  @extend .wrapper;
+
+  h1 {
+    @extend .row;
+
+    font-size: 42px;
+    letter-spacing: -1.5px;
+    line-height: 48px;
+    margin: 0 10px 10px;
+    padding-top: 18px;
+    word-spacing: -2px;
+  }
+
+  time {
+    @extend .row;
+
+    font-size: 18px;
+    margin: 0 10px 18px;
+  }
+
+  .content {
+    @extend .row;
+
+    margin: 30px 0 0;
+  }
+
+  section {
+    @extend .col-xs-12;
+    @extend .col-sm-11;
+    @extend .col-md-10;
+    @extend .col-lg-10;
+
+    margin: 0 0 10px;
+    width: 100%;
+
+    &:not(:first-of-type) {
+      margin-top: 10px;
+    }
+
+    h2 {
+      font-size: 36px;
+      font-weight: $weight-light;
+      letter-spacing: -1px;
+      line-height: 45px;
+      margin: 0 0 10px;
+      word-spacing: -1px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: $weight-light;
+      letter-spacing: -.5px;
+      line-height: 19px;
+      margin-bottom: 20px;
+      word-spacing: -1px;
+    }
+
+    ul {
+      list-style: disc;
+      margin-bottom: 20px;
+    }
+
+    li {
+      font-weight: $weight-light;
+      margin: 0 0 6px 18px;
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: $weight-regular;
+    }
+  }
+
+  @include breakpoint(md) {
+    section:not(:first-of-type) {
+      margin-top: 20px;
+    }
+  }
+}
