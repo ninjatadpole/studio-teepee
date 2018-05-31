@@ -20,7 +20,7 @@ const PrivacyPolicy = function(props) {
         <section>
           <p>
             This policy sets out the basis on which any personal data we collect
-            from you, or that you have provded to us, will be processed
+            from you, or that you have provided to us, will be processed
             by <span className="brand">Studio TeePee</span>.  If you have any
             questions about this policy, please <Link
               to="/contact"
@@ -35,11 +35,11 @@ const PrivacyPolicy = function(props) {
             Your Personal Information
           </h2>
           <p>
-            Your privacy is important to us, and that’s something that will
-            never change.  By providing personal information, such as your
-            name and email address, you agree to us contacting you.  Your
+            Your privacy is important to us, and that is something that will
+            never change.  By providing us with personal information, such as
+            your name and email address, you agree to us contacting you. Your
             personal information will only be used by us, and under no
-            circumstances will we sell your information to another organization.
+            circumstances will we sell your information to another organisation.
           </p>
           <p>
             We may collect and process information about you, including:-
@@ -56,7 +56,7 @@ const PrivacyPolicy = function(props) {
             </li>
             <li>
               Following your contact to us, we keep a record of your contact
-              details.  We use ‘<a
+              details. We use ‘<a
                 href="https://realtimecrm.co.uk/privacy-policy/"
                 target="realtime-crm"
                 className="your-personal-info--realtime-crm"
@@ -64,9 +64,9 @@ const PrivacyPolicy = function(props) {
               by Cambridge Software for this purpose.
             </li>
             <li>
-              We may also collect information provided via email or other
-              written correspondence, telephone calls, and other web-based
-              forms.  We use <a
+              We may also collect information provided via email, web-based
+              forms or other written correspondence and telephone calls.  We
+              use <a
                 href="https://www.dreamhost.com/legal/privacy-policy/"
                 target="dreamhost"
                 className="your-personal-info--dreamhost"
@@ -91,8 +91,8 @@ const PrivacyPolicy = function(props) {
             </li>
           </ul>
           <p>
-            We will only hold your information for as long as we need it.  You
-            can request for us to delete any information we have about you at
+            We will only hold your information for as long as we need it. You
+            can request that we delete any information we have about you at
             any point.
           </p>
           <p>
@@ -102,19 +102,19 @@ const PrivacyPolicy = function(props) {
             Cookies
           </h3>
           <p>
-            Cookies are data files that distinguish you from others.  You are
-            able to change or disable cookies being stored on your computer
-            by changing your browser settings.
+            Cookies are data files in your browser that distinguish you from
+            other site visitors. You are able to change or disable cookies
+            being stored on your computer by changing your browser settings.
           </p>
           <h3>
             IP Addresses
           </h3>
           <p>
             We may collect statistical information using your IP address,
-            browser type, referring / exit pages, and data/time stamps.
-            This information does not, and will never be used to, identify an
+            browser type, referring / exit pages, and date / time stamps.
+            This information does not, and will never be used to identify an
             individual.  We collect this information to understand how our
-            website is being used and is performing.  We use <a
+            website is being used and how it is performing.  We use <a
               href="https://privacy.google.com/businesses/compliance"
               target="google-analytics"
               className="your-personal-info--google-analytics"
@@ -137,15 +137,16 @@ const PrivacyPolicy = function(props) {
             Direct Marketing and Other Forms of Communication
           </h2>
           <p>
-            We will send you our annual newsletter with progress
-            of <span className="brand">Studio TeePee</span>.  You may opt
-            out from receiving this newsletter at any time, and a function
-            for this purpose will be included in each newsletter.
+            If you contact us, we will send you our annual newsletter with
+            updates about the progress of <span className="brand">Studio
+            TeePee</span>. You may opt out of receiving this newsletter at any
+            time, and a function for this purpose will be included in each
+            newsletter.
           </p>
           <p>
-            We may also retain copies of any correspondence you send us for:
-            internal record keeping; answering your queries; product
-            development.
+            We may also retain copies of any correspondence you send us for
+            the purposes of internal record keeping, answering your queries
+            and product development.
           </p>
         </section>
 
@@ -154,10 +155,10 @@ const PrivacyPolicy = function(props) {
             Your Rights
           </h2>
           <p>
-            You are a European resident, you have the right to access any
-            personal information we hold about you.  You can ask that your
-            personal information be corrected, updated, or deleted by using
-            the contact information below.
+            As a European resident, you have the right to request a copy of any
+            personal information we hold about you.  You can ask that our
+            records of your personal information be corrected, updated, or
+            deleted by using the contact information below.
           </p>
         </section>
 
@@ -180,7 +181,7 @@ const PrivacyPolicy = function(props) {
             Changes to This Policy
           </h2>
           <p>
-            We may update this privacy policy from time to time, and any
+            We may update our privacy policy from time to time, and any
             changes we make will be posted on this page.
           </p>
         </section>
