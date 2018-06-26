@@ -15,7 +15,7 @@ const PrivacyPolicy = function(props) {
   return (
     <main className="page-privacy">
       <h1>Studio TeePee Privacy Policy</h1>
-      <time datetime="2018-05-23 00:00">23rd May 2018</time>
+      <time dateTime="2018-05-23 00:00">23rd May 2018</time>
       <article className="content">
         <section>
           <p>
