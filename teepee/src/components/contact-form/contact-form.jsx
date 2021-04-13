@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import xhr from 'xhr';
-import classnames from 'classnames';
+import React from "react";
+import PropTypes from "prop-types";
+import xhr from "xhr";
+import classnames from "classnames";
 
-import ContactFormDisplay from './contact-form-display';
+import ContactFormDisplay from "./contact-form-display";
 
 class ContactForm extends React.Component {
   constructor(props) {
@@ -14,23 +14,23 @@ class ContactForm extends React.Component {
       formSending: false,
       formSent: false,
       location: {
-        'page': props.page,
-      },
-    }
+        page: props.page
+      }
+    };
 
     this.addInputRef = this.addInputRef.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.makeErrorEmail = this.makeErrorEmail.bind(this);
 
-    this.formAction = "/contact-handler.php";
+    this.formAction = "https://studioteepee.sharpfrog.com/";
     this.formElements = [];
   }
 
   addInputRef(el) {
     if (el) {
-      const elName = el.getAttribute('name');
+      const elName = el.getAttribute("name");
       if (elName) {
-        this.formElements.push({name: elName, element: el});
+        this.formElements.push({ name: elName, element: el });
       }
     } else {
       this.formElements = null;
@@ -40,55 +40,59 @@ class ContactForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.setState({
-      formSending: true,
+      formSending: true
     });
 
     const formData = this.formElements.reduce((aggregate, input) => {
       return {
         ...aggregate,
-        [input.name]: input.element.value}
+        [input.name]: input.element.value
+      };
     }, {});
 
     this.submitForm({
       ...formData,
-      ...this.state.location,
+      ...this.state.location
     });
   }
 
   submitForm(formData) {
-    xhr.post({
-      data: formData,
-      json: true,
-      url: this.formAction,
-    }, (err, resp, body) => {
-      if(err || resp.statusCode < 200 || resp.statusCode > 299) {
-        this.setState({
-          formError: formData,
-          formSending: false,
-        });
-
-        if (window.ga) {
-          window.ga('send', 'event', {
-            eventCategory: 'contact form',
-            eventAction: 'failed',
-            eventLabel: JSON.stringify(formData)
+    xhr.post(
+      {
+        data: formData,
+        json: true,
+        url: this.formAction
+      },
+      (err, resp, body) => {
+        if (err || resp.statusCode < 200 || resp.statusCode > 299) {
+          this.setState({
+            formError: formData,
+            formSending: false
           });
-        }
-      } else {
-        this.setState({
-          formSending: false,
-          formSent: true,
-        });
 
-        if (window.ga) {
-          window.ga('send', 'event', {
-            eventCategory: 'contact form',
-            eventAction: 'sent',
-            eventLabel: JSON.stringify(formData)
+          if (window.ga) {
+            window.ga("send", "event", {
+              eventCategory: "contact form",
+              eventAction: "failed",
+              eventLabel: JSON.stringify(formData)
+            });
+          }
+        } else {
+          this.setState({
+            formSending: false,
+            formSent: true
           });
+
+          if (window.ga) {
+            window.ga("send", "event", {
+              eventCategory: "contact form",
+              eventAction: "sent",
+              eventLabel: JSON.stringify(formData)
+            });
+          }
         }
       }
-    });
+    );
   }
 
   makeErrorEmail() {
@@ -99,53 +103,45 @@ class ContactForm extends React.Component {
         "Hello studio teepee.",
         "I tried to use the form on your website but it didn't work.",
         "Here is what I tried to let you know...",
-        "",
+        ""
       ];
 
       const formParts = [
-        ...(Object.keys(formData).map((key, index) => {
+        ...Object.keys(formData).map((key, index) => {
           return `${key}: "${formData[key]}"`;
-        }))
+        })
       ];
 
-      return encodeURIComponent([
-        ...introParts,
-        ...formParts,
-      ].join("\r\n"));
+      return encodeURIComponent([...introParts, ...formParts].join("\r\n"));
     } else {
-      return '';
+      return "";
     }
   }
 
   render() {
-    const {
-      addInputRef,
-      formAction,
-      handleSubmit,
-      makeErrorEmail,
-    } = this;
+    const { addInputRef, formAction, handleSubmit, makeErrorEmail } = this;
     const { formError, formSending, formSent } = this.state;
 
     return (
       <ContactFormDisplay
-        { ...{
+        {...{
           addInputRef,
           className: classnames({
             sent: formSent,
             sending: formSending,
-            error: formError,
+            error: formError
           }),
           errorMsg: makeErrorEmail(),
           formAction,
           handleSubmit
-        } }
+        }}
       />
     );
   }
 }
 
 ContactForm.propTypes = {
-  page: PropTypes.string.isRequired,
-}
+  page: PropTypes.string.isRequired
+};
 
 export default ContactForm;
