@@ -15,9 +15,8 @@ require '/home/sharpfrog_com/PHPMailer/src/Exception.php';
 require '/home/sharpfrog_com/PHPMailer/src/PHPMailer.php';
 require '/home/sharpfrog_com/PHPMailer/src/SMTP.php';
 
-// $emailTo = "_aquin@yahoo.co.uk";
+// $emailTo = "ninjatadpole@gmail.com";
 $emailTo = "hello@studioteepee.co.uk";
-$emailFrom = "contact@studioteepee.sharpfrog.com";
 
 $contact = "";
 $name = "";
@@ -85,11 +84,11 @@ try {
   $mail->Body    = $emailBody;
 
   $mail->send();
-  echo("form sent from ".$emailFrom." to ".$emailTo.": ".$emailBody);
+  echo("form sent to ".$emailTo.": ".$emailBody);
 } catch (Exception $e) {
   http_response_code(500);
   echo 'Message could not be sent.';
-  echo("From ".$emailFrom." to ".$emailTo.": ".$emailBody);
+  echo("To ".$emailTo.": ".$emailBody);
   echo 'Mailer Error: ' . $mail->ErrorInfo;
 }
 
