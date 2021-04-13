@@ -7,6 +7,10 @@ if (empty($json)) {
    exit;
 }
 
+$env_contents = file_get_contents("./.env.json");
+// Convert to array 
+$env = json_decode($env_contents, true);
+
 require '/home/sharpfrog_com/PHPMailer/src/Exception.php';
 require '/home/sharpfrog_com/PHPMailer/src/PHPMailer.php';
 require '/home/sharpfrog_com/PHPMailer/src/SMTP.php';
@@ -58,8 +62,8 @@ try {
   $mail->isSMTP();
   $mail->Host = 'smtp.dreamhost.com';
   $mail->SMTPAuth = true;
-  $mail->Username = 'contact@studioteepee.sharpfrog.com';
-  $mail->Password = 'se983unu9f8yq3873wavw3913ji';
+  $mail->Username = $env["mailuser"];
+  $mail->Password = $env["mailpass"];
   $mail->SMTPSecure = 'ssl';
   $mail->Port = 465;
 
