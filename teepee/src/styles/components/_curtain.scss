@@ -1,0 +1,124 @@
+.curtain-blur {
+  filter: blur(0);
+  transition: filter ease-in-out 500ms;
+
+  .show-curtain & {
+    filter: blur(2px);
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+.curtain-modal {
+  opacity: 0;
+  transition: opacity ease-in-out 500ms;
+
+  .show-curtain & {
+    opacity: 1;
+  }
+
+  &::before {
+    background: rgba(255, 255, 255, 0.7);
+    content: "";
+    display: none;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+
+    .show-curtain & {
+      display: block;
+    }
+  }
+
+  $border-width: 8px;
+  $half-border: $border-width/2;
+  .modal {
+    background: #d6f7f9;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    left: 50%;
+    max-width: 800px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -30%);
+    transition: transform ease-in-out 500ms;
+    width: 90%;
+    z-index: 5;
+
+    .show-curtain & {
+      transform: translate(-50%, -50%);
+    }
+
+    &::after {
+      border: $border-width dotted $black;
+      content: "";
+      height: calc(100% - #{$border-width});
+      left: -$half-border;
+      pointer-events: none;
+      position: absolute;
+      top: -$half-border;
+      width: calc(100% - #{$border-width});
+    }
+  }
+  .modal-contents {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+
+    .illustration {
+      background: center / cover no-repeat url("../assets/images/curtain.jpg");
+      flex-shrink: 0;
+      width: 48%;
+    }
+
+    .copy {
+      color: $black;
+      font-size: 25px;
+      font-weight: $weight-light;
+      width: 52%;
+      text-align: center;
+      letter-spacing: 0.2px;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: $weight-bold;
+      margin-bottom: 26px;
+      text-transform: uppercase;
+    }
+    p {
+      margin-bottom: 26px;
+    }
+    .cocoon-brand {
+      font-weight: $weight-bold;
+    }
+    .cocoon-link {
+      background: $white;
+      border: 1px solid;
+      color: $black;
+      display: block;
+      font-size: 40px;
+      font-weight: $weight-bold;
+      position: relative;
+      text-decoration: none;
+      width: 100%;
+
+      &::after {
+        content: "";
+        display: inline-block;
+      }
+
+      .offset {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -42%);
+      }
+    }
+  }
+}
